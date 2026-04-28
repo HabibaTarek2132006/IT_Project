@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+<link rel="stylesheet" href="../../component/footer/footer.css">
+
+  <title>Karps Recipes</title>
+
+  <link rel="stylesheet" href="Karp.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<h1 class="title">🍗 Karps Recipes</h1>
+
+<div class="container">
+
+  <!-- CARD 1 -->
+  <div class="card">
+     <img src="../photo/Egyptian Koshari.jpg" alt="Egyptian Koshari">
+    <div class="content">
+     <h1>Koshari</h1>
+
+<p><b>Ingredients:</b></p>
+<ul>
+  <li>Rice - 1 cup</li>
+  <li>Pasta - 1 cup</li>
+  <li>Lentils (brown) - 1 cup</li>
+  <li>Chickpeas - 1/2 cup</li>
+  <li>Onion - 2 (fried)</li>
+  <li>Tomato sauce - 2 cups</li>
+  <li>Garlic - 3 cloves</li>
+  <li>Vinegar - 2 tbsp</li>
+  <li>Salt & pepper</li>
+</ul>
+    </div>
+  </div>
+   <!-- CARD 2 -->
+  <div class="card">
+    <img src="../photo/Feteer Meshaltet.jpg" alt="Feteer Meshaltet">
+    <div class="content">
+      <h1>Feteer Meshaltet</h1>
+
+<p><b>Ingredients:</b></p>
+<ul>
+  <li>Flour - 3 cups</li>
+  <li>Water</li>
+  <li>Salt - 1 tsp</li>
+  <li>Butter or ghee - for layering</li>
+</ul>
+    </div>
+  </div>
+
+   <!-- CARD 3 -->
+ <div class="card">
+     <img src="../photo/Pizza.jpg" alt="Pizza">
+    <div class="content">
+      <h1>Pizza</h1>
+      <p><b>Ingredients:</b></p>
+<ul>
+  <li>Pizza dough</li>
+  <li>Tomato sauce</li>
+  <li>Mozzarella cheese</li>
+  <li>Olives</li>
+  <li>Bell peppers</li>
+  <li>Chicken or beef (optional)</li>
+  <li>Oregano</li>
+</ul>
+
+    </div>
+  </div>
+
+   <!-- CARD 4 -->
+   <div class="card">
+     <img src="../photo/Indian Roti.jpg" alt="Indian Roti">
+    <div class="content">
+   <h1>Roti</h1>
+
+<p><b>Ingredients:</b></p>
+<ul>
+  <li>Whole wheat flour - 2 cups</li>
+  <li>Water</li>
+  <li>Salt - pinch</li>
+  <li>Oil - optional</li>
+</ul>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+</body>
+</html>

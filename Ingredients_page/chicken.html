@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+<link rel="stylesheet" href="../../component/footer/footer.css">
+
+  <title>Chickens Recipes</title>
+
+  <link rel="stylesheet" href="chicken.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<h1 class="title">🍗 Chicken Recipes</h1>
+
+<div class="container">
+
+  <!-- CARD 1 -->
+  <div class="card">
+     <img src="../../photo/Chicken-Fettuccine-Alfredo.jpg" alt="Chicken Fettuccine Alfredo">
+    <div class="content">
+      <h1>Chicken Fettuccine Alfredo</h1>
+     <p><b>Ingredients:</b></p>
+<ul>
+  <li>Fettuccine pasta - 250g</li>
+  <li>Chicken breast - 2 pieces (sliced)</li>
+  <li>Butter - 2 tbsp</li>
+  <li>Garlic - 2 cloves (minced)</li>
+  <li>Heavy cream - 1 cup</li>
+  <li>Parmesan cheese - 1/2 cup</li>
+  <li>Salt - to taste</li>
+  <li>Black pepper - 1/2 tsp</li>
+  <li>Olive oil - 1 tbsp</li>
+</ul>
+    </div>
+  </div>
+   <!-- CARD 2 -->
+  <div class="card">
+    <img src="../../photo/Butter Chicken.jpg" alt="Butter Chicken">
+    <div class="content">
+      <h1>Butter Chicken</h1>
+     <p><b>Ingredients:</b></p>
+
+<ul>
+  <li>Chicken (breast or thigh) - 500g</li>
+  <li>Butter - 2 tbsp</li>
+  <li>Tomato puree - 1 cup</li>
+  <li>Heavy cream - 1/2 cup</li>
+  <li>Garlic - 3 cloves (minced)</li>
+  <li>Ginger - 1 tsp (grated)</li>
+  <li>Yogurt - 1 tbsp (for marination)</li>
+  <li>Paprika - 1 tsp</li>
+  <li>Garam masala - 1 tsp</li>
+  <li>Salt - to taste</li>
+  <li>Black pepper - 1/2 tsp</li>
+</ul>
+    </div>
+  </div>
+
+   <!-- CARD 3 -->
+ <div class="card">
+     <img src="../photo/Chicken-Shish-Tawook.jpg" alt="Chicken Shish Tawook">
+    <div class="content">
+      <h1>Chicken Shish Tawook</h1>
+<p><b>Ingredients:</b></p>
+<ul>
+  <li>Chicken breast (cut into cubes) - 500g</li>
+  <li>Yogurt - 3 tbsp</li>
+  <li>Lemon juice - 1 tbsp</li>
+  <li>Garlic - 3 cloves (minced)</li>
+  <li>Olive oil - 2 tbsp</li>
+  <li>Paprika - 1 tsp</li>
+  <li>Salt - to taste</li>
+  <li>Black pepper - 1/2 tsp</li>
+  <li>Thyme or oregano - 1 tsp</li>
+</ul>
+    </div>
+  </div>
+
+   <!-- CARD 4 -->
+   <div class="card">
+     <img src="../photo/Chicken-Tikka-Masala.jpg" alt="Chicken Tikka Masala">
+    <div class="content">
+      <h1>Chicken Tikka Masala</h1>
+   <p><b>Ingredients:</b></p>
+<ul>
+  <li>Chicken breast - 500g (cubed)</li>
+  <li>Yogurt - 1 cup</li>
+  <li>Lemon juice - 2 tbsp</li>
+  <li>Garam masala - 2 tsp</li>
+  <li>Turmeric - 1 tsp</li>
+  <li>Paprika - 1 tsp</li>
+  <li>Garlic - 3 cloves (minced)</li>
+  <li>Onion - 1 medium (chopped)</li>
+  <li>Tomato sauce - 1 cup</li>
+  <li>Heavy cream - 1/2 cup</li>
+  <li>Salt - to taste</li>
+  <li>Black pepper - 1/2 tsp</li>
+</ul>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CookHub</title>
+    <link rel="stylesheet" href="component/navbar/nav.css">
+  <link rel="stylesheet" href="component/footer/footer.css">
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+
+  <h1 style="text-align:center; margin-top:50px;">
+    🍳 Welcome to CookHub
+  </h1>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("component/navbar/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+
+    fetch("component/footer/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+  font-family: Arial;
+  background-color: #fff8f0;
+  margin: 0;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #ff6b6b;
+  margin-bottom: 30px;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+/* ⭐ CARD (كبير وشيك) */
+.card {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+
+  width: 1000px;     /* 👈 كبرنا العرض */
+  height: 500px;    /* 👈 كبرنا الطول */
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+/* تأثير حلو عند hover */
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* 🖼️ IMAGE */
+.card img {
+  width: 320px;        /* 👈 صورة كبيرة بس مظبوطة */
+  height: 100%;
+  object-fit: cover;   /* يخلي الصورة متقطعة بشكل حلو */
+}
+
+/* 🧾 CONTENT */
+.content {
+  padding: 20px;
+  flex: 1;
+}
+
+.content h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+.content ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
