@@ -1,0 +1,54 @@
+body {
+  font-family: Arial;
+  background: #fff8f0;
+  text-align: center;
+  margin: 0;
+}
+
+.title {
+  color: #ff6b6b;
+  margin: 20px;
+}
+
+/* input card */
+.card {
+  width: 320px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+
+button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* table */
+table {
+  margin: 20px auto;
+  width: 70%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background: #ff6b6b;
+  color: white;
+}
