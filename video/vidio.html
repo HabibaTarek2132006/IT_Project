@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Videos</title>
 
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+  <link rel="stylesheet" href="../../component/footer/footer.css">
   <link rel="stylesheet" href="vidio.css">
+
+  <title>Videos</title>
 </head>
 
 <body>
+
+<div id="navbar"></div>
 
 <h1 class="title">VIDEOS</h1>
 
@@ -58,6 +67,9 @@
 
 </div>
 
+<!-- FOOTER -->
+<div id="footer"></div>
+
 <script>
 function changeVideo(url, title) {
   document.getElementById("mainVideo").src = url;
@@ -75,6 +87,20 @@ function move(dir) {
     behavior: "smooth"
   });
 }
+</script>
+
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
 </script>
 
 </body>

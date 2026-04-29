@@ -2,11 +2,6 @@ body {
   margin: 0;
   font-family: Arial;
   background: #fff8f0;
-
-  /* 👇 ده اللي هيظبط الدنيا */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* TITLE */
@@ -22,7 +17,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin: 30px 0 40px;
 }
 
@@ -39,15 +33,13 @@ body {
   text-align: center;
 }
 
-/* WRAPPER مهم جدًا */
+/* SLIDER */
 .slider-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
-/* ARROWS */
 .arrow {
   background: #a80404;
   color: white;
@@ -56,22 +48,14 @@ body {
   padding: 10px 14px;
   cursor: pointer;
   border-radius: 10px;
-  flex-shrink: 0;
 }
 
-/* LIST FIX (أهم جزء) */
 .video-list {
   display: flex;
   gap: 15px;
-
-  /* 👇 ده السر الحقيقي */
-  justify-content: center;
-  align-items: center;
-
   width: 70%;
   overflow-x: auto;
   padding: 15px;
-
   scroll-behavior: smooth;
 }
 
@@ -79,7 +63,7 @@ body {
   display: none;
 }
 
-/* CARD */
+/* ❗ نفس الشكل الأصلي بدون أي تغيير */
 .video-item {
   min-width: 200px;
   background: white;
@@ -87,17 +71,14 @@ body {
   padding: 10px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  flex-shrink: 0;
 }
 
-/* SMALL VIDEO */
 .video-item iframe {
   width: 100%;
   height: 120px;
   border-radius: 10px;
 }
 
-/* NAME */
 .video-item p {
   margin: 8px 0 0;
   font-weight: bold;
