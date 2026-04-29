@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #fff8f0;
+}
+
+.title {
+  text-align: center;
+  font-size: 45px;
+  color: #ff6b6b;
+  margin: 20px;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card h2 {
+  margin: 10px;
+}
+
+.blog-card p {
+  margin: 10px;
+  color: #555;
+}
