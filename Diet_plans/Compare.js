@@ -11,7 +11,6 @@ const dishes = {
   "Roti": { cal: 120, protein: 4, fat: 2 }
 };
 
-// fill dropdowns
 window.onload = () => {
   let d1 = document.getElementById("dish1");
   let d2 = document.getElementById("dish2");
@@ -26,9 +25,8 @@ function compare() {
   let a = document.getElementById("dish1").value;
   let b = document.getElementById("dish2").value;
 
-  // 🚨 منع نفس الاختيار
   if (a === b) {
-    alert("اختاري أكلة مختلفة للمقارنة 👀");
+    alert("Please select two different dishes to compare.");
     return;
   }
 
@@ -36,30 +34,18 @@ function compare() {
   let y = dishes[b];
 
   document.getElementById("result").innerHTML = `
-    <table>
-      <tr>
-        <th>Feature</th>
-        <th>${a}</th>
-        <th>${b}</th>
-      </tr>
+    <div class="result-card">
+      <h2>${a}</h2>
+      <p> Calories: ${x.cal}</p>
+      <p> Protein: ${x.protein}g</p>
+      <p> Fat: ${x.fat}g</p>
+    </div>
 
-      <tr>
-        <td>Calories</td>
-        <td>${x.cal}</td>
-        <td>${y.cal}</td>
-      </tr>
-
-      <tr>
-        <td>Protein</td>
-        <td>${x.protein}g</td>
-        <td>${y.protein}g</td>
-      </tr>
-
-      <tr>
-        <td>Fat</td>
-        <td>${x.fat}g</td>
-        <td>${y.fat}g</td>
-      </tr>
-    </table>
+    <div class="result-card">
+      <h2>${b}</h2>
+      <p> Calories: ${y.cal}</p>
+      <p> Protein: ${y.protein}g</p>
+      <p> Fat: ${y.fat}g</p>
+    </div>
   `;
 }
