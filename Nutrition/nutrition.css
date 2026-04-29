@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #fff8f0;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 55px;
+  color: #4CAF50;
+  margin: 40px 0;
+}
+
+/* CONTAINER */
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+/* FOOD CARD */
+.food {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.food:hover {
+  transform: scale(1.02);
+}
+
+/* REVERSE (يمين/شمال) */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.food img {
+  width: 400px;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.text {
+  padding: 25px;
+  flex: 1;
+}
+
+/* DESCRIPTION */
+.text p {
+  color: #555;
+}
+
+/* DATA BOXES */
+.data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.data span {
+  background: #f3f3f3;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* HOVER ON DATA */
+.data span:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+/* HEALTH */
+.health {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.good {
+  color: green;
+}
+
+.bad {
+  color: red;
+}
