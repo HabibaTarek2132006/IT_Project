@@ -11,7 +11,7 @@
 
   <title>Chickens Recipes</title>
 
-  <link rel="stylesheet" href="chicken.css">
+  <link rel="stylesheet" href="Compare.css">
 </head>
 
 <body>
@@ -19,21 +19,19 @@
 <!-- NAVBAR -->
 <div id="navbar"></div>
 
-<h1></h1> class="title">🍽️ Compare Dishes</h1>
+<h1 class="title">🍽️ Compare Dishes</h1>
 
-<div class="card">
-
+<div class="input-card">
   <select id="dish1"></select>
   <select id="dish2"></select>
-
   <button onclick="compare()">Compare</button>
-
 </div>
 
-<!-- RESULT -->
-<div id="result"></div>
+<div id="result" class="result-container"></div>
 
-<script src="compare.js"></script>
+<script src="Compare.js"></script>
+
+<div id="footer"></div>
 
 <script>
 fetch("../../component/navbar/nav.html")
