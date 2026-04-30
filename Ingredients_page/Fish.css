@@ -2,7 +2,12 @@ body {
   font-family: Arial;
   background-color: #fff8f0;
   margin: 0;
-  padding: 0; /* ❌ شيلنا الـ padding عشان ميبقاش فيه فراغ */
+  padding: 0;
+
+  /* مهم للفوتر */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TITLE */
@@ -18,7 +23,10 @@ body {
   flex-direction: column;
   gap: 25px;
   align-items: center;
-  width: 100%; /* ✅ يخليها تملى الصفحة */
+  width: 100%;
+
+  /* يخلي المحتوى يدفع الفوتر لتحت */
+  flex: 1;
 }
 
 /* CARD */
@@ -27,14 +35,16 @@ body {
   background: white;
   border-radius: 15px;
 
-  width: 90%;      /* ✅ بدل 1000px */
-  max-width: 1200px; /* يخليها كبيرة بس مش تطلع برا */
-  height: 500px;
-
+  width: 90%;
+  max-width: 1200px;
+  min-height: 500px; /* بدل height الثابت */
+  
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   overflow: hidden;
 
   transition: 0.3s;
+
+  position: relative;
 }
 
 /* hover */
@@ -65,4 +75,34 @@ body {
   margin: 0;
   padding-left: 20px;
   line-height: 1.6;
+}
+
+/* ===================== */
+/* ADD BUTTON */
+/* ===================== */
+.add-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+
+  background-color: #ff5722;
+  color: white;
+
+  border: none;
+  width: 110px;
+  height: 42px;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+/* hover effect */
+.add-btn:hover {
+  background-color: #ff3b3b;
+  transform: scale(1.05);
 }

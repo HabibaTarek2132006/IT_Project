@@ -6,11 +6,14 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Desserts Recipes</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="../../component/navbar/nav.css">
-<link rel="stylesheet" href="../../component/footer/footer.css">
-
-  <title>Chicken Recipes</title>
-
+  <link rel="stylesheet" href="../../component/footer/footer.css">
   <link rel="stylesheet" href="Desert.css">
 </head>
 
@@ -19,55 +22,88 @@
 <!-- NAVBAR -->
 <div id="navbar"></div>
 
-<h1 class="title">Deserts Recipes</h1>
+<h1 class="title">🍰 Desserts Recipes</h1>
 
 <div class="container">
 
-  <!-- CARD 1 -->
+  <!-- ================= CARD 1 ================= -->
   <div class="card">
-    <img src="../photo/Tiramisu.jpg" alt="Tiramisu">
+    <img src="../../photo/Tiramisu.jpg" alt="Tiramisu">
+
     <div class="content">
-      <h1> Tiramisu</h1>
+      <h2>Tiramisu</h2>
+
       <p><b>Ingredients:</b></p>
-<ul>
-  <li>Ladyfinger biscuits (Savoiardi)</li>
-  <li>Mascarpone cheese - 250g</li>
-  <li>Eggs - 2 (yolks only)</li>
-  <li>Sugar - 3 tbsp</li>
-  <li>Strong coffee - 1 cup (cold)</li>
-  <li>Cocoa powder - for topping</li>
-  <li>Vanilla extract - 1 tsp (optional)</li>
-</ul>
+      <ul>
+        <li>Ladyfinger biscuits</li>
+        <li>Mascarpone cheese - 250g</li>
+        <li>Eggs - 2 (yolks)</li>
+        <li>Sugar - 3 tbsp</li>
+        <li>Strong coffee - 1 cup</li>
+        <li>Cocoa powder</li>
+        <li>Vanilla extract (optional)</li>
+      </ul>
+
+      <button class="add-btn" onclick="addRecipe(
+        'Tiramisu',
+        '../../photo/Tiramisu.jpg',
+        [
+          'Ladyfinger biscuits',
+          'Mascarpone cheese - 250g',
+          'Eggs - 2 (yolks)',
+          'Sugar - 3 tbsp',
+          'Strong coffee - 1 cup',
+          'Cocoa powder',
+          'Vanilla extract (optional)'
+        ]
+      )">
+        Add 🛒
+      </button>
 
     </div>
   </div>
-  <!-- CARD 1 -->
+
+  <!-- ================= CARD 2 ================= -->
   <div class="card">
-    <img src="../photo/Jalebi.jpg" alt="Tiramisu">
-    <div class="content">
-     <h1>Jalebi</h1>
+    <img src="../../photo/Jalebi.jpg" alt="Jalebi">
 
-<p><b>Ingredients:</b></p>
-<ul>
-  <li>Flour - 1 cup</li>
-  <li>Corn flour - 2 tbsp</li>
-  <li>Yogurt - 1/2 cup</li>
-  <li>Sugar syrup</li>
-  <li>Saffron or food color</li>
-  <li>Oil for frying</li>
-</ul>
+    <div class="content">
+      <h2>Jalebi</h2>
+
+      <p><b>Ingredients:</b></p>
+      <ul>
+        <li>Flour - 1 cup</li>
+        <li>Corn flour - 2 tbsp</li>
+        <li>Yogurt - 1/2 cup</li>
+        <li>Sugar syrup</li>
+        <li>Saffron or food color</li>
+        <li>Oil for frying</li>
+      </ul>
+
+      <button class="add-btn" onclick="addRecipe(
+        'Jalebi',
+        '../../photo/Jalebi.jpg',
+        [
+          'Flour - 1 cup',
+          'Corn flour - 2 tbsp',
+          'Yogurt - 1/2 cup',
+          'Sugar syrup',
+          'Saffron or food color',
+          'Oil for frying'
+        ]
+      )">
+        Add 🛒
+      </button>
+
     </div>
   </div>
- 
-
- 
-
 
 </div>
 
 <!-- FOOTER -->
 <div id="footer"></div>
 
+<!-- NAV + FOOTER -->
 <script>
 fetch("../../component/navbar/nav.html")
   .then(res => res.text())
@@ -81,5 +117,23 @@ fetch("../../component/footer/footer.html")
     document.getElementById("footer").innerHTML = data;
   });
 </script>
+
+<!-- 🛒 GROCERY SYSTEM -->
+<script>
+function addRecipe(name, img, ingredients) {
+    let grocery = JSON.parse(localStorage.getItem("grocery")) || [];
+
+    grocery.push({
+        name: name,
+        img: img,
+        ingredients: ingredients
+    });
+
+    localStorage.setItem("grocery", JSON.stringify(grocery));
+
+    alert(name + " added to Grocery 🛒");
+}
+</script>
+
 </body>
 </html>

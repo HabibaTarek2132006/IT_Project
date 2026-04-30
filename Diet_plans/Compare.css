@@ -6,7 +6,7 @@ body {
 }
 
 .title {
-  color: #c98383;
+  color: #db690b;
   margin: 20px;
 }
 
@@ -28,7 +28,7 @@ select, button {
 }
 
 button {
-  background: #8b6262;
+  background: #d37b23;
   color: white;
   border: none;
   cursor: pointer;
@@ -52,7 +52,7 @@ button {
 }
 
 .result-card h2 {
-  color: #c47676;
+  color: #e87c00;
   margin-bottom: 15px;
 }
 

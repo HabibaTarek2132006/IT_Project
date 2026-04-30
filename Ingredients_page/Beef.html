@@ -6,11 +6,14 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Beef Recipes</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="../../component/navbar/nav.css">
-<link rel="stylesheet" href="../../component/footer/footer.css">
-
-  <title>Chicken Recipes</title>
-
+  <link rel="stylesheet" href="../../component/footer/footer.css">
   <link rel="stylesheet" href="Beaf.css">
 </head>
 
@@ -23,80 +26,134 @@
 
 <div class="container">
 
-  <!-- CARD 1 -->
+  <!-- ================= CARD 1 ================= -->
   <div class="card">
-    <img src="../photo/Lasagna.jpg" alt="lasagna">
+    <img src="../../photo/Lasagna.jpg" alt="Beef Lasagna">
+
     <div class="content">
-      <h1>Beef Lasagna</h1>
-     <p><b>Ingredients:</b></p>
-<ul>
-  <li>Lasagna sheets</li>
-  <li>Minced chicken or beef - 500g</li>
-  <li>Tomato sauce - 2 cups</li>
-  <li>Onion - 1 (chopped)</li>
-  <li>Garlic - 3 cloves</li>
-  <li>Bechamel sauce - 2 cups</li>
-  <li>Cheese (mozzarella) - 1 cup</li>
-  <li>Salt & pepper - to taste</li>
-  <li>Olive oil - 1 tbsp</li>
-</ul>
+      <h2>Beef Lasagna</h2>
+
+      <p><b>Ingredients:</b></p>
+      <ul>
+        <li>Lasagna sheets</li>
+        <li>Minced beef - 500g</li>
+        <li>Tomato sauce - 2 cups</li>
+        <li>Onion - 1 (chopped)</li>
+        <li>Garlic - 3 cloves</li>
+        <li>Bechamel sauce - 2 cups</li>
+        <li>Cheese (mozzarella) - 1 cup</li>
+        <li>Salt & pepper - to taste</li>
+        <li>Olive oil - 1 tbsp</li>
+      </ul>
+
+      <!-- زر الإضافة -->
+      <button class="add-btn" onclick="addRecipe(
+        'Beef Lasagna',
+        '../../photo/Lasagna.jpg',
+        [
+          'Lasagna sheets',
+          'Minced beef - 500g',
+          'Tomato sauce - 2 cups',
+          'Onion - 1 (chopped)',
+          'Garlic - 3 cloves',
+          'Bechamel sauce - 2 cups',
+          'Cheese (mozzarella) - 1 cup',
+          'Salt & pepper - to taste',
+          'Olive oil - 1 tbsp'
+        ]
+      )">
+        Add 🛒
+      </button>
+
     </div>
   </div>
-   <!-- CARD 2 -->
+
+  <!-- ================= CARD 2 ================= -->
   <div class="card">
-    <img src="../photo/Lamb-Rogan-Josh.jpg" alt="Lamb Rogan Josh">
-    <div class="content">
-      <h1>Lamb Rogan Josh</h1>
-   <p><b>Ingredients:</b></p>
+    <img src="../../photo/Lamb-Rogan-Josh.jpg" alt="Lamb Rogan Josh">
 
-<ul>
-  <li>Lamb (or beef) - 500g (cut pieces)</li>
-  <li>Yogurt - 1 cup</li>
-  <li>Onion - 1 large (sliced)</li>
-  <li>Garlic - 4 cloves (minced)</li>
-  <li>Ginger - 1 tsp (grated)</li>
-  <li>Tomato puree - 1 cup</li>
-  <li>Oil or ghee - 2 tbsp</li>
-  <li>Garam masala - 1 tsp</li>
-  <li>Turmeric - 1/2 tsp</li>
-  <li>Chili powder - 1 tsp</li>
-  <li>Coriander powder - 1 tsp</li>
-  <li>Salt - to taste</li>
-  <li>Black pepper - 1/2 tsp</li>
-</ul>
+    <div class="content">
+      <h2>Lamb Rogan Josh</h2>
+
+      <p><b>Ingredients:</b></p>
+      <ul>
+        <li>Lamb (or beef) - 500g</li>
+        <li>Yogurt - 1 cup</li>
+        <li>Onion - 1 large</li>
+        <li>Garlic - 4 cloves</li>
+        <li>Ginger - 1 tsp</li>
+        <li>Tomato puree - 1 cup</li>
+        <li>Oil or ghee - 2 tbsp</li>
+        <li>Garam masala - 1 tsp</li>
+        <li>Salt - to taste</li>
+      </ul>
+
+      <button class="add-btn" onclick="addRecipe(
+        'Lamb Rogan Josh',
+        '../../photo/Lamb-Rogan-Josh.jpg',
+        [
+          'Lamb (or beef) - 500g',
+          'Yogurt - 1 cup',
+          'Onion - 1 large',
+          'Garlic - 4 cloves',
+          'Ginger - 1 tsp',
+          'Tomato puree - 1 cup',
+          'Oil or ghee - 2 tbsp',
+          'Garam masala - 1 tsp',
+          'Salt - to taste'
+        ]
+      )">
+        Add 🛒
+      </button>
+
     </div>
   </div>
 
-   <!-- CARD 3 -->
- <div class="card">
-     <img src="../photo/Fatta.jpg" alt="Lamb Rogan Josh">
-    <div class="content">
-      <h1>Lamb Rogan Josh</h1>
-<p><b>Ingredients:</b></p>
+  <!-- ================= CARD 3 ================= -->
+  <div class="card">
+    <img src="../../photo/Fatta.jpg" alt="Beef Recipe">
 
-<ul>
-  <li>Chicken breast (cut into cubes) - 500g</li>
-  <li>Yogurt - 3 tbsp</li>
-  <li>Lemon juice - 1 tbsp</li>
-  <li>Garlic - 3 cloves (minced)</li>
-  <li>Olive oil - 2 tbsp</li>
-  <li>Paprika - 1 tsp</li>
-  <li>Salt - to taste</li>
-  <li>Black pepper - 1/2 tsp</li>
-  <li>Thyme or oregano - 1 tsp</li>
-  <li>Optional: Cumin - 1/2 tsp (for extra flavor)</li>
-</ul>
+    <div class="content">
+      <h2>Beef Spiced Dish</h2>
+
+      <p><b>Ingredients:</b></p>
+      <ul>
+        <li>Beef or chicken - 500g</li>
+        <li>Yogurt - 3 tbsp</li>
+        <li>Lemon juice - 1 tbsp</li>
+        <li>Garlic - 3 cloves</li>
+        <li>Olive oil - 2 tbsp</li>
+        <li>Paprika - 1 tsp</li>
+        <li>Salt - to taste</li>
+        <li>Black pepper - 1/2 tsp</li>
+      </ul>
+
+      <button class="add-btn" onclick="addRecipe(
+        'Beef Spiced Dish',
+        '../../photo/Fatta.jpg',
+        [
+          'Beef or chicken - 500g',
+          'Yogurt - 3 tbsp',
+          'Lemon juice - 1 tbsp',
+          'Garlic - 3 cloves',
+          'Olive oil - 2 tbsp',
+          'Paprika - 1 tsp',
+          'Salt - to taste',
+          'Black pepper - 1/2 tsp'
+        ]
+      )">
+        Add 🛒
+      </button>
+
     </div>
   </div>
-
- 
-
 
 </div>
 
 <!-- FOOTER -->
 <div id="footer"></div>
 
+<!-- NAV + FOOTER -->
 <script>
 fetch("../../component/navbar/nav.html")
   .then(res => res.text())
@@ -110,5 +167,23 @@ fetch("../../component/footer/footer.html")
     document.getElementById("footer").innerHTML = data;
   });
 </script>
+
+<!-- 🛒 GROCERY SYSTEM -->
+<script>
+function addRecipe(name, img, ingredients) {
+    let grocery = JSON.parse(localStorage.getItem("grocery")) || [];
+
+    grocery.push({
+        name: name,
+        img: img,
+        ingredients: ingredients
+    });
+
+    localStorage.setItem("grocery", JSON.stringify(grocery));
+
+    alert(name + " added to Grocery 🛒");
+}
+</script>
+
 </body>
 </html>

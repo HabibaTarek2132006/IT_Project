@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Grocery Page</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+  <link rel="stylesheet" href="../../component/footer/footer.css">
+  <link rel="stylesheet" href="Grocery.css">
+</head>
+
+<body>
+
+<!-- 🔹 NAVBAR -->
+<div id="navbar"></div>
+
+<h1>🛒 Grocery Recipes</h1>
+
+<!-- CONTENT -->
+<div id="itemsContainer" class="container"></div>
+
+<!-- 🔹 FOOTER -->
+<div id="footer"></div>
+
+<!-- JS -->
+<script src="Grocery.js"></script>
+
+<!-- LOAD NAV + FOOTER -->
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
