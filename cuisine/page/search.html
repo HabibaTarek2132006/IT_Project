@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - CookHub</title>
+    <link rel="stylesheet" href="../../index.css"> <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="search-results-container">
+        <header class="search-header">
+            <h1>Results for: <span id="search-query">"..."</span></h1>
+            <p class="results-count">Found 3 recipes</p>
+        </header>
+
+        <section class="results-grid">
+            <div class="recipe-card">
+                <div class="card-img">
+                    <img src="../../photo/pasta.jpg" alt="Pasta">
+                </div>
+                <div class="card-info">
+                    <span class="category">Quick Dinners</span>
+                    <h3>Easy Creamy Pasta</h3>
+                    <p>Ready in 15 minutes, perfect for busy nights.</p>
+                    <a href="#" class="view-btn">View Recipe</a>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-img">
+                    <img src="../../photo/butter-chicken.jpg" alt="Chicken">
+                </div>
+                <div class="card-info">
+                    <span class="category">Indian</span>
+                    <h3>Butter Chicken</h3>
+                    <p>Classic comfort food with rich creamy sauce.</p>
+                    <a href="#" class="view-btn">View Recipe</a>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-img">
+                    <img src="../../photo/koshari.jpg" alt="Koshari">
+                </div>
+                <div class="card-info">
+                    <span class="category">Egyptian</span>
+                    <h3>Classic Koshari</h3>
+                    <p>The ultimate Egyptian street food experience.</p>
+                    <a href="#" class="view-btn">View Recipe</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // تحميل الناف بار والفوتر (تأكدي من صحة المسارات)
+        fetch("../../component/navbar/nav.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+
+        fetch("../../component/footer/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
+</body>
+</html>

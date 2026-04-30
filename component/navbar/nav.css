@@ -1,13 +1,16 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* NAVBAR */
 .navbar {
-  background: #464040;
+  background: #2d2a2a;
   color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* TOP */
@@ -15,63 +18,124 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 40px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 26px;
+  font-weight: 900;
+  color: #ff5722;
 }
 
 .search {
-  padding: 20px 30px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  width: 45%;
+  background: #403b3b;
+  color: white;
   border: none;
-  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search:focus {
+  background: white;
+  color: #333;
+  width: 50%;
 }
 
 .fav {
   cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* BOTTOM */
+.fav:hover {
+  color: #ff5722;
+  transform: scale(1.1);
+}
+
+/* BOTTOM NAV */
 .nav-bottom {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   gap: 18px;
-  padding: 10px;
+  padding: 12px 20px;
+  flex-wrap: wrap;
 }
 
-.dropdown {
+/* ITEMS */
+.nav-bottom li {
   position: relative;
-  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ddd;
+  cursor: pointer;
 }
 
+/* LINKS */
+.nav-bottom li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-bottom li:hover,
+.nav-bottom li a:hover {
+  color: #ff5722;
+}
+
+/* DROPDOWN MENU */
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: #2d2a2a;
+  list-style: none;
+  padding: 10px 0;
   min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 1000;
 }
 
+/* DROPDOWN ITEMS */
+.dropdown-menu li {
+  padding: 8px 15px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a {
+  color: #ddd;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  color: #ff5722;
+}
+
+/* SHOW ON HOVER */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu li {
-  list-style: none;
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 10px;
+/* SUBMIT BUTTON */
+.submit-btn a {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
   text-decoration: none;
-  color: black;
+  transition: 0.3s;
 }
 
-.dropdown-menu li a:hover {
-  background: #eee;
+.submit-btn a:hover {
+  background-color: white;
+  color: #ff5722;
 }

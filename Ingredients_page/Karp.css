@@ -2,13 +2,14 @@ body {
   font-family: Arial;
   background-color: #fff8f0;
   margin: 0;
-  padding: 20px;
+  padding: 0; /* ❌ شيلنا الـ padding عشان ميبقاش فيه فراغ */
 }
 
+/* TITLE */
 .title {
   text-align: center;
   color: #ff6b6b;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 /* CONTAINER */
@@ -17,16 +18,18 @@ body {
   flex-direction: column;
   gap: 25px;
   align-items: center;
+  width: 100%; /* ✅ يخليها تملى الصفحة */
 }
 
-/* ⭐ CARD (كبير وشيك) */
+/* CARD */
 .card {
   display: flex;
   background: white;
   border-radius: 15px;
 
-  width: 1000px;     /* 👈 كبرنا العرض */
-  height: 500px;    /* 👈 كبرنا الطول */
+  width: 90%;      /* ✅ بدل 1000px */
+  max-width: 1200px; /* يخليها كبيرة بس مش تطلع برا */
+  height: 500px;
 
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   overflow: hidden;
@@ -34,19 +37,19 @@ body {
   transition: 0.3s;
 }
 
-/* تأثير حلو عند hover */
+/* hover */
 .card:hover {
   transform: scale(1.02);
 }
 
-/* 🖼️ IMAGE */
+/* IMAGE */
 .card img {
-  width: 320px;        /* 👈 صورة كبيرة بس مظبوطة */
+  width: 35%;
   height: 100%;
-  object-fit: cover;   /* يخلي الصورة متقطعة بشكل حلو */
+  object-fit: cover;
 }
 
-/* 🧾 CONTENT */
+/* CONTENT */
 .content {
   padding: 20px;
   flex: 1;

@@ -2,33 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CookHub</title>
-    <link rel="stylesheet" href="component/navbar/nav.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CookHub - Delicious Recipes</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="component/navbar/nav.css">
   <link rel="stylesheet" href="component/footer/footer.css">
 </head>
 
 <body>
 
+  <!-- NAVBAR -->
   <div id="navbar"></div>
 
-  <h1 style="text-align:center; margin-top:50px;">
-    🍳 Welcome to CookHub
-  </h1>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>🍽️ CookHub</h1>
+      <p>Discover recipes, cook easy meals & explore world cuisines</p>
+      <a href="#quick-dinners" class="btn-main">Explore Recipes</a>
+    </div>
+  </section>
 
+  <!-- QUICK DINNERS -->
+  <section class="section" id="quick-dinners">
+    <div class="container">
+      <h2>⚡ Quick Dinners</h2>
+
+      <div class="row">
+        <div class="img-container">
+          <img src="https://i.pinimg.com/736x/cf/b2/45/cfb24538600abd3dc3ff7ccf09bf3bfe.jpg">
+        </div>
+        <div class="text">
+          <h3>Easy Pasta</h3>
+          <p>Quick creamy pasta ready in 15 minutes for busy days.</p>
+          <a href="#" class="btn-secondary">View Recipe</a>
+        </div>
+      </div>
+
+      <div class="row reverse">
+        <div class="img-container">
+          <img src="https://i.pinimg.com/1200x/45/34/b9/4534b974183032508acd98e1ba6ec473.jpg">
+        </div>
+        <div class="text">
+          <h3>Butter Chicken</h3>
+          <p>Rich Indian curry with creamy sauce and aromatic spices.</p>
+          <a href="#" class="btn-secondary">View Recipe</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRENDING -->
+  <section class="section trending">
+    <div class="container">
+      <h2>🔥 Trending Now</h2>
+
+      <div class="row">
+        <div class="img-container">
+          <img src="https://i.pinimg.com/1200x/fd/5c/f8/fd5cf88f2d2b08c3ce030ccc25944d6a.jpg">
+        </div>
+        <div class="text">
+          <h3>Koshari</h3>
+          <p>Egypt’s most famous street food.</p>
+          <a href="#" class="btn-secondary">View Recipe</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <div id="footer"></div>
 
+  <!-- SCRIPT -->
   <script>
+    // تحميل الناف بار
     fetch("component/navbar/nav.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
+
+        // dropdown click
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(drop => {
+          drop.addEventListener('click', function(e) {
+
+            // يخلي اللينك يشتغل عادي
+            if (e.target.tagName === "A") return;
+
+            // يقفل باقي القوايم
+            document.querySelectorAll('.dropdown-menu').forEach(m => {
+              if (m !== this.querySelector('.dropdown-menu')) {
+                m.classList.remove('show');
+              }
+            });
+
+            // يفتح / يقفل
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+              menu.classList.toggle('show');
+            }
+
+            e.stopPropagation();
+          });
+        });
       });
 
-    fetch("component/footer/footer.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
+    // يقفل لو ضغطتي برة
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown-menu').forEach(m => {
+        m.classList.remove('show');
       });
+    });
   </script>
 
 </body>
