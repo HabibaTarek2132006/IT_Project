@@ -30,7 +30,6 @@
 }
 
 .search {
-<<<<<<< HEAD
   padding: 12px 25px;
   border-radius: 50px;
   width: 45%;
@@ -45,12 +44,6 @@
   background: white;
   color: #333;
   width: 50%;
-=======
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  width: 40%;
->>>>>>> 0b251db585ab706dd0f232fda48e45b2e38d5e75
 }
 
 .fav {
@@ -59,7 +52,6 @@
   transition: 0.3s;
 }
 
-<<<<<<< HEAD
 .fav:hover {
   color: #ff5722;
   transform: scale(1.1);
@@ -83,28 +75,6 @@
   font-weight: 600;
   color: #ddd;
   cursor: pointer;
-=======
-/* BOTTOM NAV */
-.nav-bottom {
-  display: flex;
-  justify-content: center;   /* كل الكلام في النص */
-  align-items: center;
-  list-style: none;
-  gap: 18px;
-  padding: 10px 20px;
-  position: relative;
-}
-
-/* LINKS */
-.nav-bottom li {
-  color: white;
-  cursor: pointer;
-}
-
-/* DROPDOWN */
-.dropdown {
-  position: relative;
->>>>>>> 0b251db585ab706dd0f232fda48e45b2e38d5e75
 }
 
 /* LINKS */
@@ -165,32 +135,7 @@
   transition: 0.3s;
 }
 
-<<<<<<< HEAD
 .submit-btn a:hover {
   background-color: white;
   color: #ff5722;
 }
-=======
-.dropdown-menu li a:hover {
-  background: #eee;
-}
-
-/* ⭐ SUBMIT BUTTON (FIXED RIGHT) */
-.submit-btn {
-  position: absolute;
-  right: 20px;
-}
-
-.submit-btn a {
-  background-color: #534a4a;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.submit-btn a:hover {
-  background-color: #1c1b1b;
-}
->>>>>>> 0b251db585ab706dd0f232fda48e45b2e38d5e75
