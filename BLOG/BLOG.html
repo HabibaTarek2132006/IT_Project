@@ -1,0 +1,177 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+<link rel="stylesheet" href="../../component/footer/footer.css">
+
+  <title>Chickens Recipes</title>
+
+  <link rel="stylesheet" href="Blog.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>   
+
+<h1 class="title">🍳 Cooking Blog</h1>
+
+<div class="blog-container">
+
+  <div class="blog-card">
+    <img src="../photo/Egyptian Koshari.jpg" alt="Koshari">
+    <div class="blog-text">
+      <h2>Koshari</h2>
+      <p>Egyptian street food made of rice, pasta, lentils, chickpeas and spicy tomato sauce.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Moussaka.jpg" alt="Moussaka">
+    <div class="blog-text">
+      <h2>Moussaka</h2>
+      <p>Layers of eggplant, minced meat and tomato sauce baked until soft and rich.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Fatta.jpg" alt="Fatta">
+    <div class="blog-text">
+      <h2>Fatta</h2>
+      <p>Rice, crispy bread, garlic vinegar sauce and meat. Traditional Egyptian dish.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Feteer Meshaltet.jpg" alt="Feteer">
+    <div class="blog-text">
+      <h2>Feteer Meshaltet</h2>
+      <p>Flaky Egyptian pastry served sweet or savory.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Chicken-Shish-Tawook.jpg" alt="Shish Tawook">
+    <div class="blog-text">
+      <h2>Shish Tawook</h2>
+      <p>Grilled chicken marinated in yogurt, garlic and lemon.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../../photo/Butter Chicken.jpg" alt="Butter Chicken">
+    <div class="blog-text">
+      <h2>Butter Chicken</h2>
+      <p>Creamy Indian chicken curry with rich tomato sauce.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../../photo/Chicken-Fettuccine-Alfredo.jpg" alt="Alfredo">
+    <div class="blog-text">
+      <h2>Chicken Alfredo</h2>
+      <p>Creamy pasta with chicken, butter and parmesan cheese.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Tiramisu.jpg" alt="Tiramisu">
+    <div class="blog-text">
+      <h2>Tiramisu</h2>
+      <p>Italian dessert with coffee biscuits and mascarpone cream.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Jalebi.jpg" alt="Jalebi">
+    <div class="blog-text">
+      <h2>Jalebi</h2>
+      <p>Sweet crispy dessert soaked in sugar syrup.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Pizza.jpg" alt="Pizza">
+    <div class="blog-text">
+      <h2>Pizza</h2>
+      <p>Italian dish with cheese, sauce and toppings.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Indian Roti.jpg" alt="Roti">
+    <div class="blog-text">
+      <h2>Roti</h2>
+      <p>Soft Indian flatbread served with curries.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Chrimp ricztto.jpg" alt="Risotto">
+    <div class="blog-text">
+      <h2>Seafood Risotto</h2>
+      <p>Creamy Italian rice with seafood and broth.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Chicken-Tikka-Masala.jpg" alt="Tikka Masala">
+    <div class="blog-text">
+      <h2>Chicken Tikka Masala</h2>
+      <p>Grilled chicken in spicy creamy tomato sauce.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="../photo/Lamb-Rogan-Josh.jpg" alt="Rogan Josh">
+    <div class="blog-text">
+      <h2>Lamb Rogan Josh</h2>
+      <p>Rich Indian lamb curry with yogurt and spices.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+</body>
+</html>
+
+
+

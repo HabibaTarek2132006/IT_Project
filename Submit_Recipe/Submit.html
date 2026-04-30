@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Recipe</title>
+
+  <!-- Navbar & Footer CSS -->
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+  <link rel="stylesheet" href="../../component/footer/footer.css">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="submit.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<h1 class="title">Submit Your Recipe</h1>
+
+<div class="form-container">
+
+  <form id="recipeForm">
+
+    <label>Recipe Name</label>
+    <input type="text" id="name" placeholder="Enter recipe name" required>
+
+    <label>Upload Image</label>
+    <input type="file" id="image">
+
+    <label>Ingredients</label>
+    <textarea id="ingredients" placeholder="Write ingredients..." required></textarea>
+
+    <label>Instructions</label>
+    <textarea id="steps" placeholder="How to cook..." required></textarea>
+
+    <label>Category</label>
+    <select id="category">
+      <option>Egyptian</option>
+      <option>Italian</option>
+      <option>Indian</option>
+      <option>Dessert</option>
+    </select>
+
+    <button type="submit">Submit Recipe</button>
+
+  </form>
+
+  <p id="msg"></p>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+<script src="submit.js"></script>
+
+</body>
+</html>

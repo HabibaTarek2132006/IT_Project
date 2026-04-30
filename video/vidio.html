@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+  <link rel="stylesheet" href="../../component/footer/footer.css">
+  <link rel="stylesheet" href="vidio.css">
+
+  <title>Videos</title>
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<h1 class="title">VIDEOS</h1>
+
+<!-- MAIN VIDEO -->
+<div class="main-video">
+  <iframe id="mainVideo"
+    src="https://www.youtube.com/embed/XyHL7aJDUag"
+    allowfullscreen>
+  </iframe>
+  <h2 id="mainTitle">Koshari</h2>
+</div>
+
+<!-- SLIDER -->
+<div class="slider-wrapper">
+
+  <button class="arrow" onclick="move(-1)">&#10094;</button>
+
+  <div class="video-list" id="videoList">
+
+    <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/XyHL7aJDUag','Koshari')">
+      <iframe src="https://www.youtube.com/embed/XyHL7aJDUag"></iframe>
+      <p>Koshari</p>
+    </div>
+
+    <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/W-2qdsVNHQo','Moussaka')">
+      <iframe src="https://www.youtube.com/embed/W-2qdsVNHQo"></iframe>
+      <p>Moussaka</p>
+    </div>
+
+    <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/7jvq64auiEU','Fatta')">
+      <iframe src="https://www.youtube.com/embed/7jvq64auiEU"></iframe>
+      <p>Fatta</p>
+    </div>
+
+    <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/CzPFk6wBiko','Feteer')">
+      <iframe src="https://www.youtube.com/embed/CzPFk6wBiko"></iframe>
+      <p>Feteer</p>
+    </div>
+
+    <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/MGmZWMpd6Gk','Shish Tawook')">
+      <iframe src="https://www.youtube.com/embed/MGmZWMpd6Gk"></iframe>
+      <p>Shish Tawook</p>
+    </div>
+
+  </div>
+
+  <button class="arrow" onclick="move(1)">&#10095;</button>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+function changeVideo(url, title) {
+  document.getElementById("mainVideo").src = url;
+  document.getElementById("mainTitle").innerText = title;
+}
+
+let scrollAmount = 0;
+
+function move(dir) {
+  const list = document.getElementById("videoList");
+  scrollAmount += dir * 250;
+
+  list.scrollTo({
+    left: scrollAmount,
+    behavior: "smooth"
+  });
+}
+</script>
+
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

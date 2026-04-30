@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+<link rel="stylesheet" href="../../component/footer/footer.css">
+
+  <title>Chickens Recipes</title>
+
+  <link rel="stylesheet" href="nutrition.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 class="title">🥗 Nutrition Info</h1>
+
+<div class="container">
+
+  <!-- 1 -->
+  <div class="food">
+    <img src="../photo/Egyptian Koshari.jpg">
+    <div class="text">
+      <h2>Koshari</h2>
+      <p>Egyptian street food rich in carbs and fiber.</p>
+      <div class="data">
+        <span>Calories: 450</span>
+        <span>Protein: 15g</span>
+        <span>Carbs: 70g</span>
+        <span>Fat: 10g</span>
+        <span>Sugar: 6g</span>
+        <span>Vitamins: B, Iron</span>
+      </div>
+      <p class="health good">✔ Balanced meal</p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="food reverse">
+    <img src="../photo/Moussaka.jpg">
+    <div class="text">
+      <h2>Moussaka</h2>
+      <p>Eggplant and meat dish rich in nutrients.</p>
+      <div class="data">
+        <span>Calories: 400</span>
+        <span>Protein: 20g</span>
+        <span>Carbs: 25g</span>
+        <span>Fat: 18g</span>
+        <span>Sugar: 5g</span>
+        <span>Vitamins: A, C</span>
+      </div>
+      <p class="health good">✔ Healthy choice</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="food">
+    <img src="../photo/Fatta.jpg">
+    <div class="text">
+      <h2>Fatta</h2>
+      <p>Traditional dish with rice and meat.</p>
+      <div class="data">
+        <span>Calories: 600</span>
+        <span>Protein: 30g</span>
+        <span>Carbs: 65g</span>
+        <span>Fat: 25g</span>
+        <span>Sugar: 4g</span>
+        <span>Vitamins: B12</span>
+      </div>
+      <p class="health bad">⚠ High calories</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="food reverse">
+    <img src="../../photo/Butter Chicken.jpg">
+    <div class="text">
+      <h2>Butter Chicken</h2>
+      <p>Creamy Indian dish rich in fats.</p>
+      <div class="data">
+        <span>Calories: 550</span>
+        <span>Protein: 28g</span>
+        <span>Carbs: 20g</span>
+        <span>Fat: 30g</span>
+        <span>Sugar: 6g</span>
+        <span>Vitamins: A</span>
+      </div>
+      <p class="health bad">⚠ Heavy meal</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="food">
+    <img src="../photo/Pizza.jpg">
+    <div class="text">
+      <h2>Pizza</h2>
+      <p>Popular dish high in carbs.</p>
+      <div class="data">
+        <span>Calories: 300</span>
+        <span>Protein: 12g</span>
+        <span>Carbs: 35g</span>
+        <span>Fat: 10g</span>
+        <span>Sugar: 4g</span>
+        <span>Vitamins: Calcium</span>
+      </div>
+      <p class="health bad">⚠ Eat moderately</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+</body>
+</html>
