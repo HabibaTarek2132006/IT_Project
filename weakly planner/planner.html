@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+<link rel="stylesheet" href="../../component/footer/footer.css">
+<title>weekly planner</title>
+
+
+<style>
+body {
+  font-family: Arial;
+  background: #ffe8dc;
+  text-align: center;
+  
+}
+
+.container {
+  background: rgb(245, 240, 240);
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(218, 196, 154, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* الجدول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background: #ff7043;
+  color: white;
+}
+
+input {
+  width: 90%;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* زرار */
+button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+</style>
+
+</head>
+
+<body>
+  
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<div class="container">
+  <h2>Weekly Meal Planner</h2>
+
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+    </tr>
+
+    <!-- الأيام -->
+    <tr>
+      <td>Saturday</td>
+      <td><input id="sat-b"></td>
+      <td><input id="sat-l"></td>
+      <td><input id="sat-d"></td>
+    </tr>
+
+    <tr>
+      <td>Sunday</td>
+      <td><input id="sun-b"></td>
+      <td><input id="sun-l"></td>
+      <td><input id="sun-d"></td>
+    </tr>
+
+    <tr>
+      <td>Monday</td>
+      <td><input id="mon-b"></td>
+      <td><input id="mon-l"></td>
+      <td><input id="mon-d"></td>
+    </tr>
+
+    <tr>
+      <td>Tuesday</td>
+      <td><input id="tue-b"></td>
+      <td><input id="tue-l"></td>
+      <td><input id="tue-d"></td>
+    </tr>
+
+    <tr>
+      <td>Wednesday</td>
+      <td><input id="wed-b"></td>
+      <td><input id="wed-l"></td>
+      <td><input id="wed-d"></td>
+    </tr>
+
+    <tr>
+      <td>Thursday</td>
+      <td><input id="thu-b"></td>
+      <td><input id="thu-l"></td>
+      <td><input id="thu-d"></td>
+    </tr>
+
+    <tr>
+      <td>Friday</td>
+      <td><input id="fri-b"></td>
+      <td><input id="fri-l"></td>
+      <td><input id="fri-d"></td>
+    </tr>
+
+  </table>
+
+  <button onclick="savePlan()">Save Plan</button>
+  <button onclick="loadPlan()">Load Plan</button>
+</div>
+
+
+
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+    function savePlan() {
+  const inputs = document.querySelectorAll("input");
+
+  inputs.forEach(input => {
+    localStorage.setItem(input.id, input.value);
+  });
+
+  alert("Saved successfully ✅");
+}
+
+function loadPlan() {
+  const inputs = document.querySelectorAll("input");
+
+  inputs.forEach(input => {
+    input.value = localStorage.getItem(input.id) || "";
+  });
+}
+
+// تحميل تلقائي أول ما الصفحة تفتح
+window.onload = loadPlan;
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

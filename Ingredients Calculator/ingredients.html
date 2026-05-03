@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+<link rel="stylesheet" href="../../component/footer/footer.css">
+  <title>Ingredients Calculator</title>
+
+  <style>
+    body {
+      text-align: center;
+      padding: 30px;
+  background: #fff8f0;
+    }
+
+    .container {
+      background: rgb(246, 236, 236);
+      padding: 25px;
+      border-radius: 12px;
+      width: 480px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      width: 90%;
+      height: 100px;
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    button {
+      padding: 8px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #ff7043;
+      color: white;
+    }
+
+    button:hover {
+      background: #e64a19;
+    }
+
+    #servings {
+      font-size: 20px;
+      margin: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<div class="container">
+  <h2>Ingredients Calculator</h2>
+
+  <p>Enter ingredients (with numbers):</p>
+
+  <textarea id="input">
+1 rice
+2 eggs
+200 chicken
+  </textarea>
+
+  <br>
+
+  <button onclick="loadIngredients()">Load Recipe</button>
+
+  <hr>
+
+  <h3>Servings</h3>
+
+  <button onclick="changeServings(-1)">➖</button>
+  <span id="servings">2</span>
+  <button onclick="changeServings(1)">➕</button>
+
+  <ul id="output"></ul>
+
+  <br>
+  <button onclick="goBack()">⬅ Back</button>
+</div>
+
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+
+<script>
+let baseServings = 2;
+let currentServings = 2;
+let ingredients = [];
+
+function loadIngredients() {
+  const lines = document.getElementById("input").value.split("\n");
+
+  ingredients = lines.map(line => {
+    let parts = line.trim().split(" ");
+    return {
+      amount: parseFloat(parts[0]),
+      name: parts.slice(1).join(" ")
+    };
+  });
+
+  update();
+}
+
+function update() {
+  const list = document.getElementById("output");
+  list.innerHTML = "";
+
+  ingredients.forEach(item => {
+    let newAmount = (item.amount * currentServings) / baseServings;
+    newAmount = Math.round(newAmount * 100) / 100;
+
+    list.innerHTML += `<li>${newAmount} ${item.name}</li>`;
+  });
+}
+
+function changeServings(change) {
+  currentServings += change;
+  if (currentServings < 1) currentServings = 1;
+
+  document.getElementById("servings").innerText = currentServings;
+  update();
+}
+
+function goBack() {
+  window.history.back();
+}
+
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

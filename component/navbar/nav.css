@@ -139,3 +139,19 @@
   background-color: white;
   color: #ff5722;
 }
+
+
+
+.fav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #db4711cb; /* اللون الأساسي */
+ transition: all 0.2s ease;
+}
+
+.fav a:active {
+  color: #0078d7; /* اللون يتغير عند الضغط */
+  font-size: 20px; /* الكلمة تكبر شوية */
+  transform: scale(1.1); /* تكبير بسيط */
+}
