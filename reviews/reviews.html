@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Reviews & Ratings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="reviews.css">
+</head>
+
+<body>
+
+<a href="/index.html" class="back-btn">← Back Home</a>
+
+<h1 class="title">⭐ Customer Reviews</h1>
+
+<!-- ADD REVIEW SECTION -->
+<div class="add-review">
+
+  <h2>✍️ Share Your Experience</h2>
+
+  <input type="text" id="name" placeholder="Your Name">
+
+  <select id="stars">
+    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+    <option value="⭐⭐⭐">⭐⭐⭐</option>
+    <option value="⭐⭐">⭐⭐</option>
+    <option value="⭐">⭐</option>
+  </select>
+
+  <textarea id="text" placeholder="Write your review..."></textarea>
+
+  <button onclick="addReview()">Submit Review</button>
+
+</div>
+
+<!-- REVIEWS -->
+<div class="reviews-container">
+
+  <!-- preset reviews -->
+  <div class="review-card">
+    <h3>Ahmed Hassan 🇪🇬</h3>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Koshari tastes amazing, very authentic Egyptian flavor!</p>
+  </div>
+
+  <div class="review-card">
+    <h3>Raj Sharma 🇮🇳</h3>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Biryani and Butter Chicken are absolutely perfect!</p>
+  </div>
+
+  <div class="review-card">
+    <h3>Marco Rossi 🇮🇹</h3>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Pizza and Pasta feel like real Italy experience!</p>
+  </div>
+
+  <div class="review-card">
+    <h3>Emily Johnson 🇺🇸</h3>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>The UI is clean and recipes are super easy to follow.</p>
+  </div>
+
+  <div class="review-card">
+    <h3>Sofia Martinez 🇪🇸</h3>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Love the food variety from different cultures!</p>
+  </div>
+
+  <div class="review-card">
+    <h3>David Lee 🇰🇷</h3>
+    <p>⭐⭐⭐⭐</p>
+    <p>Great platform for discovering world cuisines.</p>
+  </div>
+
+</div>
+
+<script src="reviews.js"></script>
+
+</body>
+</html>

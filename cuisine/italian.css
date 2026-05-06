@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c")
+  background: url("https://images.unsplash.com/photo-1521305916504-4a1121188589")
   no-repeat center center/cover;
 
   min-height: 100vh;
@@ -13,6 +13,8 @@ body {
 body::before {
   content: "";
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(255, 248, 240, 0.85);
@@ -37,10 +39,11 @@ body::before {
   padding: 30px;
 }
 
-/* card */
+/* card base */
 .card {
   width: 260px;
   height: 200px;
+
   border-radius: 18px;
 
   display: flex;
@@ -62,7 +65,7 @@ body::before {
   cursor: pointer;
 }
 
-/* dark overlay */
+/* overlay */
 .card::after {
   content: "";
   position: absolute;
@@ -84,19 +87,26 @@ body::before {
   transform: translateY(-12px) scale(1.05);
 }
 
-/* images */
-.koshari {
-  background-image: url("https://i.pinimg.com/1200x/7c/fe/41/7cfe418b3bd02e3cec40ade35e9bd63e.jpg");
+/* 🍕 Italian food images */
+.pizza {
+  background-image: url("https://images.unsplash.com/photo-1601924582970-9238bcb495d9");
 }
 
-.feteer {
-  background-image: url("https://i.pinimg.com/1200x/27/19/f3/2719f3d66d582dcb2e1fe35e4b117ce6.jpg");
+.lasagna {
+  background-image: url("https://i.pinimg.com/736x/d4/ce/d1/d4ced18a63c0b745a48542d7b10aafaa.jpg");
 }
 
-.moussaka {
-  background-image: url("https://simplerecipes.me/wp-content/uploads/2025/07/Classic_Greek_Eggplant_Moussaka_eytues.webp");
+.pasta {
+  background-image: url("https://i.pinimg.com/1200x/8b/97/2c/8b972c15cf3cd32eb66a6d01e9f15a33.jpg");
 }
 
+.tiramisu {
+  background-image: url("https://i.pinimg.com/1200x/9d/3b/1a/9d3b1ac9ab60ac9e4a9a62e82c081154.jpg");
+}
+
+.risotto {
+  background-image: url("https://i.pinimg.com/1200x/da/1e/40/da1e4080a9f166a7293fb30d866e9050.jpg");
+}
 /* ❤️ Save button */
 .save-btn {
   position: absolute;

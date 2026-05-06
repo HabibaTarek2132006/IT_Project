@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  min-height: 100vh;
+
+  /* 🍽️ Food background */
+  background: url("https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba")
+  no-repeat center center/cover;
+
+  position: relative;
+}
+
+/* 🔥 dark overlay (مطفيه) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 42px;
+  margin: 30px 0;
+  color: #ff6b6b;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  background: rgba(255, 107, 107, 0.9);
+  color: white;
+
+  padding: 10px 15px;
+  border-radius: 25px;
+
+  text-decoration: none;
+  font-size: 14px;
+
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ================= FORM ================= */
+.add-review {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+  text-align: center;
+
+  animation: slideUp 0.8s ease;
+}
+
+.add-review h2 {
+  color: #ff6b6b;
+}
+
+/* inputs */
+.add-review input,
+.add-review select,
+.add-review textarea {
+  width: 90%;
+  margin: 10px 0;
+  padding: 12px;
+
+  border-radius: 12px;
+  border: none;
+  outline: none;
+
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.add-review textarea {
+  height: 90px;
+  resize: none;
+}
+
+/* placeholder */
+.add-review input::placeholder,
+.add-review textarea::placeholder {
+  color: #ddd;
+}
+
+/* button */
+.add-review button {
+  background: #ff6b6b;
+  color: white;
+
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-review button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= REVIEWS ================= */
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* CARD */
+.review-card {
+  padding: 20px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+  transition: 0.4s ease;
+
+  /* ✨ animation entry */
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.review-card:hover {
+  transform: translateY(-12px) scale(1.03);
+}
+
+/* text styling */
+.review-card h3 {
+  color: #ff6b6b;
+}
+
+.review-card p:nth-child(2) {
+  color: gold;
+}
+
+.review-card p:nth-child(3) {
+  color: #ddd;
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* cards appear */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* form animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .reviews-container {
+    grid-template-columns: 1fr;
+  }
+}

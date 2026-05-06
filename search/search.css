@@ -1,0 +1,113 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🌙 خلفية هادية */
+body {
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1490645935967-10de6ba17061")
+              no-repeat center/cover;
+  position: relative;
+}
+
+/* overlay خفيف */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 248, 240, 0.7);
+  z-index: -1;
+}
+
+/* 🔙 زرار باك */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #ad2d02;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+/* 🔍 HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.hero h1 {
+  color: #ad2d02;
+  font-size: 36px;
+}
+
+.hero p {
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+/* 🔍 input */
+#searchInput {
+  width: 280px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+#searchInput:focus {
+  width: 330px;
+}
+
+/* 🍽️ grid */
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 🧊 glass cards */
+.card {
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+}
+
+/* no results */
+#noResults {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  display: none;
+}

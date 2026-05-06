@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Egyptian Food</title>
+  <title>Indian Food</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -11,9 +11,10 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/component/navbar/nav.css">
-  <link rel="stylesheet" href="/component/footer/footer.css">
-  <link rel="stylesheet" href="/cuisine/egypt.css">
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+  <link rel="stylesheet" href="../../component/footer/footer.css">
+  <link rel="stylesheet" href="indian.css">
+
 </head>
 
 <body>
@@ -21,30 +22,30 @@
 <!-- NAVBAR -->
 <div id="navbar"></div>
 
-<h1 class="title">🇪🇬 Egyptian Food</h1>
+<h1 class="title">🇮🇳 Indian Food</h1>
 
 <div class="container">
 
-  <div class="card koshari">
-    <h3>Koshari</h3>
+  <div class="card butter-chicken">
+    <h3>Butter Chicken</h3>
 
-    <button class="save-btn" onclick="addBookmark('Koshari', 'Egyptian', '🍲')">
+    <button class="save-btn" onclick="addBookmark('Butter Chicken', 'Indian', '🍛')">
       ❤️ Save
     </button>
   </div>
 
-  <div class="card feteer">
-    <h3>Feteer Meshaltet</h3>
+  <div class="card tikka-masala">
+    <h3>Chicken Tikka Masala</h3>
 
-    <button class="save-btn" onclick="addBookmark('Feteer Meshaltet', 'Egyptian', '🥞')">
+    <button class="save-btn" onclick="addBookmark('Chicken Tikka Masala', 'Indian', '🍛')">
       ❤️ Save
     </button>
   </div>
 
-  <div class="card moussaka">
-    <h3>Moussaka</h3>
+  <div class="card biryani">
+    <h3>Biryani</h3>
 
-    <button class="save-btn" onclick="addBookmark('Moussaka', 'Egyptian', '🍆')">
+    <button class="save-btn" onclick="addBookmark('Biryani', 'Indian', '🍛')">
       ❤️ Save
     </button>
   </div>
@@ -54,21 +55,22 @@
 <!-- FOOTER -->
 <div id="footer"></div>
 
-<!-- JS -->
+<!-- JS LOAD -->
 <script>
-fetch("/component/navbar/nav.html")
+fetch("../../component/navbar/nav.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("navbar").innerHTML = data;
   });
 
-fetch("/component/footer/footer.html")
+fetch("../../component/footer/footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;
   });
 
-// Bookmark function
+
+// ⭐ Bookmark function
 function addBookmark(name, from, icon) {
   let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
 
