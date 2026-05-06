@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+
+  background: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352")
+    no-repeat center center/cover;
+
+  min-height: 100vh;
+  position: relative;
+}
+
+/* overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+/* title */
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin: 60px 0 30px;
+  color: #ff6b6b;
+  position: relative;
+  z-index: 2;
+}
+
+/* back button 🔙 */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  background: rgba(255, 107, 107, 0.9);
+  color: white;
+
+  padding: 10px 15px;
+  border-radius: 25px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+}
+
+/* container */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* card */
+.card {
+  width: 340px;
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* inputs */
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+
+  outline: none;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* button */
+button {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #ff6b6b;
+  color: white;
+
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* contact links */
+.real-contact {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.real-contact h3 {
+  color: #ddd;
+}
+
+.contact-option {
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+
+  width: 85%;
+  border-radius: 25px;
+
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+/* email */
+.contact-option.email {
+  background: linear-gradient(135deg, #6c63ff, #4f46e5);
+}
+
+/* whatsapp */
+.contact-option.whatsapp {
+  background: linear-gradient(135deg, #25d366, #1ebe57);
+}
+
+.contact-option:hover {
+  transform: scale(1.06);
+}
