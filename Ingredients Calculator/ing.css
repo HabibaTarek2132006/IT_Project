@@ -1,0 +1,186 @@
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial;
+}
+
+/* BODY */
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+    no-repeat center/cover;
+}
+
+/* CONTAINER */
+.container{
+  width:90%;
+  max-width:900px;
+
+  margin:40px auto;
+
+  padding:25px;
+
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+
+  border-radius:20px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+  text-align:center;
+
+  color:white;
+}
+
+/* INPUTS */
+textarea, input{
+  width:100%;
+  padding:10px;
+
+  border-radius:10px;
+  border:none;
+
+  outline:none;
+
+  margin-top:8px;
+}
+
+/* BUTTONS */
+button{
+  padding:10px 15px;
+  margin:5px;
+
+  border:none;
+  border-radius:25px;
+
+  cursor:pointer;
+
+  color:white;
+  font-weight:bold;
+
+  background:#ff7a3d;
+
+  transition:0.3s;
+}
+
+button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+
+/* TEXTAREA + INPUT */
+input, textarea{
+  width:100%;
+  padding:12px 14px;
+
+  margin:8px 0;
+
+  border-radius:12px;
+
+  border:1px solid rgba(0,0,0,0.1);
+
+  outline:none;
+
+  font-size:14px;
+
+  background:white;
+  color:#333;
+
+  transition:0.3s;
+}
+
+/* FOCUS EFFECT */
+input:focus,
+textarea:focus{
+  border:1px solid #ff7a3d;
+  box-shadow:0 0 10px rgba(255,122,61,0.4);
+
+  transform:scale(1.02);
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder{
+  color:#888;
+  font-size:13px;
+}
+
+/* TEXTAREA SPECIFIC */
+textarea{
+  height:120px;
+  resize:none;
+  border-radius:12px;
+}
+
+/* SERVINGS NUMBER */
+#servings{
+  font-size:22px;
+  font-weight:bold;
+  margin:0 10px;
+
+  color:white;
+}
+
+input, textarea{
+  background: rgba(255,255,255,0.95);
+  border:none;
+
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+nav .logo{
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* LINKS */
+nav .links a{
+  color:white;
+  text-decoration:none;
+
+  margin:0 10px;
+
+  font-size:14px;
+
+  transition:0.3s;
+}
+
+nav .links a:hover{
+  color:#ff7a3d;
+}
+
+/* ACTIVE */
+nav .links a.active{
+  color:#ff7a3d;
+  font-weight:bold;
+}
+
+/* FOOTER FIX */
+#footer{
+  margin-top:auto;
+  width:100%;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  nav{
+    flex-direction:column;
+    height:auto;
+    padding:15px;
+  }
+
+  nav .links{
+    margin-top:10px;
+  }
+}

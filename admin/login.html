@@ -16,10 +16,14 @@
 
     <h2>Admin Login</h2>
 
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Password">
+    <form onsubmit="login(event)">
 
-    <button onclick="login()">Login</button>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+
+      <button type="submit">Login</button>
+
+    </form>
 
     <p id="msg"></p>
 

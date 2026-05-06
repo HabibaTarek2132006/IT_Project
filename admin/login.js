@@ -1,24 +1,25 @@
-function login(){
+function login(e){
+  e.preventDefault();
 
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
   let msg = document.getElementById("msg");
 
-  // 🔐 بيانات الأدمن (تقدري تغيريهم)
-  let adminEmail = "suzan@gmail.com";
-  let adminPassword = "1234";
+  let admins = [
+    { email: "suzan@gmail.com", password: "1234" },
+    { email: "raghad@gmail.com", password: "1234" }
+  ];
 
-  if(email === adminEmail && password === adminPassword){
+  let found = admins.find(a => a.email === email && a.password === password);
 
-    // تسجيل دخول
+  if(found){
     localStorage.setItem("adminLoggedIn", "true");
 
-    msg.style.color = "lightgreen";
+    msg.style.color = "green";
     msg.innerText = "Login successful ✔";
 
-    // تحويل للداشبورد
-    setTimeout(()=>{
+    setTimeout(() => {
       window.location.href = "admin.html";
     }, 1000);
 
