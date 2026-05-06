@@ -3,17 +3,27 @@
   <!-- TOP -->
   <div class="nav-top">
     <div class="logo">🍳 CookHub</div>
-    <input class="search" type="text" placeholder="Search..." />
-    <div class="fav"><li><a href="/Admin Dashboard/admin.html">Admin Dashboard</a></li></div>
+
+    <input class="search" type="text" id="navSearch" placeholder="Search..." />
+
+    <div class="fav">❤️ Favorite</div>
+
+    <!-- AUTH AREA -->
+    <div id="authArea">
+      <a href="/pages/auth/login.html">Login</a>
+      <a href="/pages/auth/register.html">Register</a>
+    </div>
+
+    <!-- ADMIN -->
+    <div class="admin-link">
+      <a href="/Admin Dashboard/admin.html">Admin Dashboard</a>
+    </div>
   </div>
 
   <!-- BOTTOM NAV LINKS -->
   <ul class="nav-bottom">
 
-    <!-- HOME -->
-    <li>
-      <a href="/index.html">Home</a>
-    </li>
+    <li><a href="/index.html">Home</a></li>
 
     <li class="dropdown">
       Dinners
@@ -45,16 +55,14 @@
       </ul>
     </li>
 
-    <li>
-      <a href="/Nutrition/nutrition.html">Health info</a>
-    </li>
+    <li><a href="/Nutrition/nutrition.html">Health info</a></li>
 
     <li class="dropdown">
       Cuisines
       <ul class="dropdown-menu">
-        <li><a href="#">Italian</a></li>
-        <li><a href="#">Indian</a></li>
-        <li><a href="#">Egyptian</a></li>
+        <li><a href="/cuisine/italian.html">Italian</a></li>
+        <li><a href="/cuisine/indian.html">Indian</a></li>
+        <li><a href="/cuisine/egypt.html">Egyptian</a></li>
       </ul>
     </li>
 
@@ -62,7 +70,7 @@
       Kitchen Tips
       <ul class="dropdown-menu">
         <li><a href="/Ingredients Calculator/ingredients.html">Ingredients calculator</a></li>
-        <li><a href="">Cooking Tips</a></li>
+        <li><a href="#">Cooking Tips</a></li>
         <li><a href="#">Storage Tips</a></li>
         <li><a href="#">Knife Skills</a></li>
       </ul>
@@ -77,16 +85,27 @@
       </ul>
     </li>
 
+    <li><a href="/BLOG/BLOG.html">Blogs</a></li>
+
     <li>
-      <a href="/BLOG/BLOG.html">Blogs</a>
+      <a href="/reviews/reviews.html">Reviews & Ratings</a>
+    </li>
+
+    <li>
+      <a href="/bookmark/bookmark.html">Bookmark</a>
     </li>
 
     <li class="dropdown">
       Video
       <ul class="dropdown-menu">
         <li><a href="/video/vidio.html">Cooking Videos</a></li>
-        
       </ul>
+    </li>
+
+    <li>
+      <a href="/contact/contact.html" class="contact-link">
+        📞 Contact & Live Chat
+      </a>
     </li>
 
     <li class="dropdown">
@@ -115,8 +134,6 @@
       <a href="/Grocery Integration/Grocery.html">Your Grocery List</a>
     </li>
 
-
   </ul>
-  
 
 </nav>
