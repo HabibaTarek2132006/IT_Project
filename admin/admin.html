@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+  <a href="javascript:history.back()" class="back-arrow">←</a>
+
+<h1>Admin Dashboard</h1>
+
+<!-- ADD RECIPE -->
+<h2>Add Recipe</h2>
+
+<form id="adminForm">
+
+  <input type="text" id="a_name" placeholder="Recipe Name">
+
+  <input type="file" id="a_image" accept="image/*">
+
+  <input type="text" id="a_country" placeholder="Country">
+
+  <input type="text" id="a_category" placeholder="Category">
+
+  <textarea id="a_ing" placeholder="Ingredients"></textarea>
+
+  <textarea id="a_steps" placeholder="Steps"></textarea>
+
+  <button type="submit">Add Recipe</button>
+
+</form>
+
+<!-- PENDING -->
+<h2>Pending Recipes</h2>
+<div id="pending"></div>
+
+<!-- APPROVED -->
+<h2>Approved Recipes</h2>
+<div id="approved"></div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

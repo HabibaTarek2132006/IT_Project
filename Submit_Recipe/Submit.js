@@ -5,25 +5,38 @@ document.getElementById("recipeForm").addEventListener("submit", function(e) {
   let ingredients = document.getElementById("ingredients").value;
   let steps = document.getElementById("steps").value;
   let category = document.getElementById("category").value;
+  let imageInput = document.getElementById("image");
 
-  if (name === "" || ingredients === "" || steps === "") {
+  if (!name || !ingredients || !steps) {
     document.getElementById("msg").innerText = "Please fill all fields!";
     return;
   }
 
-  let recipe = {
-    name: name,
-    ingredients: ingredients,
-    steps: steps,
-    category: category
+  let reader = new FileReader();
+
+  reader.onload = function() {
+
+    let recipe = {
+      id: Date.now(),
+      name,
+      ingredients,
+      steps,
+      category,
+      image: reader.result || "",
+      status: "pending"
+    };
+
+    let pending = JSON.parse(localStorage.getItem("pendingRecipes")) || [];
+    pending.push(recipe);
+    localStorage.setItem("pendingRecipes", JSON.stringify(pending));
+
+    document.getElementById("msg").innerText = "Recipe sent for review ✔";
+    document.getElementById("recipeForm").reset();
   };
 
-  // LocalStorage
-  let recipes = JSON.parse(localStorage.getItem("recipes")) || [];
-  recipes.push(recipe);
-  localStorage.setItem("recipes", JSON.stringify(recipes));
-
-  document.getElementById("msg").innerText = "Recipe added successfully ✔";
-
-  document.getElementById("recipeForm").reset();
+  if (imageInput.files[0]) {
+    reader.readAsDataURL(imageInput.files[0]);
+  } else {
+    reader.onload();
+  }
 });
