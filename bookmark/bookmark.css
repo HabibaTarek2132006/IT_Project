@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+
+  background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+    no-repeat center center/cover;
+
+  position: relative;
+  color: white;
+}
+
+/* overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+/* title */
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin: 40px 0 10px;
+  color: #ff6b6b;
+}
+
+/* container */
+.bookmark-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* card */
+.bookmark-card {
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+
+  padding: 20px;
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+  transition: 0.3s ease;
+}
+
+.bookmark-card:hover {
+  transform: translateY(-10px);
+}
+
+/* back button */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  background: rgba(255, 107, 107, 0.9);
+  color: white;
+
+  padding: 10px 16px;
+  border-radius: 25px;
+
+  text-decoration: none;
+}
+
+/* clear all */
+.clear-btn {
+  display: block;
+  margin: 10px auto 20px;
+
+  background: #ff4b4b;
+  color: white;
+
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+
+  cursor: pointer;
+}
+
+/* ❌ delete single item button */
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: rgba(255, 75, 75, 0.9);
+  color: white;
+
+  border: none;
+  border-radius: 50%;
+
+  width: 28px;
+  height: 28px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}

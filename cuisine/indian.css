@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c")
+  background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
   no-repeat center center/cover;
 
   min-height: 100vh;
@@ -13,6 +13,8 @@ body {
 body::before {
   content: "";
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(255, 248, 240, 0.85);
@@ -37,10 +39,11 @@ body::before {
   padding: 30px;
 }
 
-/* card */
+/* card base */
 .card {
   width: 260px;
   height: 200px;
+
   border-radius: 18px;
 
   display: flex;
@@ -59,10 +62,11 @@ body::before {
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   transition: 0.3s ease;
+
   cursor: pointer;
 }
 
-/* dark overlay */
+/* overlay */
 .card::after {
   content: "";
   position: absolute;
@@ -84,19 +88,18 @@ body::before {
   transform: translateY(-12px) scale(1.05);
 }
 
-/* images */
-.koshari {
-  background-image: url("https://i.pinimg.com/1200x/7c/fe/41/7cfe418b3bd02e3cec40ade35e9bd63e.jpg");
+/* 🍛 Indian images */
+.butter-chicken {
+  background-image: url("https://i.pinimg.com/1200x/45/34/b9/4534b974183032508acd98e1ba6ec473.jpg");
 }
 
-.feteer {
-  background-image: url("https://i.pinimg.com/1200x/27/19/f3/2719f3d66d582dcb2e1fe35e4b117ce6.jpg");
+.tikka-masala {
+  background-image: url("https://i.pinimg.com/1200x/c2/56/25/c25625b0af2ca7f4352fdeab05d93e4e.jpg");
 }
 
-.moussaka {
-  background-image: url("https://simplerecipes.me/wp-content/uploads/2025/07/Classic_Greek_Eggplant_Moussaka_eytues.webp");
+.biryani {
+  background-image: url("https://i.pinimg.com/1200x/99/d1/0c/99d10c9d780efe3e5d607b1b579b4fb6.jpg");
 }
-
 /* ❤️ Save button */
 .save-btn {
   position: absolute;

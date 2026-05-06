@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Italian Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+  <link rel="stylesheet" href="../../component/footer/footer.css">
+  <link rel="stylesheet" href="italian.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<h1 class="title">🇮🇹 Italian Food</h1>
+
+<div class="container">
+
+  <div class="card pizza">
+    <h3>Pizza</h3>
+
+    <button class="save-btn" onclick="addBookmark('Pizza', 'Italian', '🍕')">
+      ❤️ Save
+    </button>
+  </div>
+
+  <div class="card lasagna">
+    <h3>Lasagna</h3>
+
+    <button class="save-btn" onclick="addBookmark('Lasagna', 'Italian', '🍝')">
+      ❤️ Save
+    </button>
+  </div>
+
+  <div class="card pasta">
+    <h3>Pasta Alfredo</h3>
+
+    <button class="save-btn" onclick="addBookmark('Pasta Alfredo', 'Italian', '🍝')">
+      ❤️ Save
+    </button>
+  </div>
+
+  <div class="card tiramisu">
+    <h3>Tiramisu</h3>
+
+    <button class="save-btn" onclick="addBookmark('Tiramisu', 'Italian', '🍰')">
+      ❤️ Save
+    </button>
+  </div>
+
+  <div class="card risotto">
+    <h3>Risotto</h3>
+
+    <button class="save-btn" onclick="addBookmark('Risotto', 'Italian', '🍚')">
+      ❤️ Save
+    </button>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- JS -->
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+
+
+// ⭐ Save function (Bookmark)
+function addBookmark(name, from, icon) {
+  let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+
+  bookmarks.push({ name, from, icon });
+
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+
+  alert("Saved ❤️");
+}
+</script>
+
+</body>
+</html>

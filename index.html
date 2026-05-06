@@ -18,16 +18,23 @@
 
   <!-- HERO -->
   <section class="hero">
+
+    <div class="hero-overlay"></div>
+
     <div class="hero-content">
       <h1>🍽️ CookHub</h1>
       <p>Discover recipes, cook easy meals & explore world cuisines</p>
       <a href="#quick-dinners" class="btn-main">Explore Recipes</a>
     </div>
+
+    <a href="#quick-dinners" class="scroll-down">⬇ Scroll</a>
+
   </section>
 
   <!-- QUICK DINNERS -->
   <section class="section" id="quick-dinners">
     <div class="container">
+
       <h2>⚡ Quick Dinners</h2>
 
       <div class="row">
@@ -58,6 +65,7 @@
   <!-- TRENDING -->
   <section class="section trending">
     <div class="container">
+
       <h2>🔥 Trending Now</h2>
 
       <div class="row">
@@ -73,69 +81,80 @@
 
     </div>
   </section>
+<!-- 🌍 CUISINES PREVIEW -->
+<section class="section">
+  <div class="container">
 
+    <h2>🌍 Explore Cuisines</h2>
+
+    <div class="food-grid">
+
+      <div class="food-card">
+        <h3>🇪🇬 Egyptian</h3>
+        <p>Koshari • Molokhia • Feteer</p>
+      </div>
+
+      <div class="food-card">
+        <h3>🇮🇹 Italian</h3>
+        <p>Pizza • Pasta • Lasagna</p>
+      </div>
+
+      <div class="food-card">
+        <h3>🇮🇳 Indian</h3>
+        <p>Biryani • Curry • Tikka</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 🍰 POPULAR FOODS -->
+<section class="section trending">
+  <div class="container">
+
+    <h2>🍽️ Popular Dishes</h2>
+
+    <div class="food-grid">
+
+      <div class="food-card big">
+        <h3>🍝 Pasta Alfredo</h3>
+        <p>Creamy Italian pasta loved worldwide</p>
+      </div>
+
+      <div class="food-card big">
+        <h3>🍛 Butter Chicken</h3>
+        <p>Rich Indian creamy curry</p>
+      </div>
+
+      <div class="food-card big">
+        <h3>🍲 Koshari</h3>
+        <p>Egyptian street food legend</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
   <!-- FOOTER -->
   <div id="footer"></div>
 
   <!-- SCRIPT -->
   <script>
-    // تحميل الناف بار
     fetch("component/navbar/nav.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
-
-        // dropdown click
-        const dropdowns = document.querySelectorAll('.dropdown');
-
-        dropdowns.forEach(drop => {
-          drop.addEventListener('click', function(e) {
-
-            // يخلي اللينك يشتغل عادي
-            if (e.target.tagName === "A") return;
-
-            // يقفل باقي القوايم
-            document.querySelectorAll('.dropdown-menu').forEach(m => {
-              if (m !== this.querySelector('.dropdown-menu')) {
-                m.classList.remove('show');
-              }
-            });
-
-            // يفتح / يقفل
-            const menu = this.querySelector('.dropdown-menu');
-            if (menu) {
-              menu.classList.toggle('show');
-            }
-
-            e.stopPropagation();
-          });
-        });
       });
 
-    // يقفل لو ضغطتي برة
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.dropdown-menu').forEach(m => {
-        m.classList.remove('show');
+    fetch("component/footer/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
       });
-    });
   </script>
 
-<!-- 🔹 FOOTER -->
-<div id="footer"></div>
-
-<!-- 🔥 JS LOAD -->
-<script>
-fetch("../../component/navbar/nav.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("navbar").innerHTML = data;
-  });
-
-fetch("../../component/footer/footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-  });
-</script>
 </body>
 </html>
+
+
