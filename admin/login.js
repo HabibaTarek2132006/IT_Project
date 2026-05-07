@@ -8,7 +8,10 @@ function login(e){
 
   let admins = [
     { email: "suzan@gmail.com", password: "1234" },
-    { email: "raghad@gmail.com", password: "1234" }
+    { email: "raghad@gmail.com", password: "1234" },
+    { email: "habiba@gmail.com", password: "1234" },
+    { email: "shahd@gmail.com", password: "1234" },
+    { email: "salma@gmail.com", password: "1234" }
   ];
 
   let found = admins.find(a => a.email === email && a.password === password);
