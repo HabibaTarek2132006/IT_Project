@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="../../component/navbar/nav.css">
+<link rel="stylesheet" href="../../component/footer/footer.css">
+
+  <title>Chickens Recipes</title>
+
+  <link rel="stylesheet" href="video.css">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<div id="navbar"></div> 
+<div id="navbar"></div>
+
+ <h1 class="page-title">VIDEO</h1>
+
+<!-- ⭐ FEATURED VIDEO -->
+<div class="featured-video">
+  <iframe id="mainVideo"
+    src="https://www.youtube.com/embed/XyHL7aJDUag"
+    allowfullscreen></iframe>
+  <h2 id="mainTitle">Koshari</h2>
+</div>
+
+<!-- 🔽 CAROUSEL -->
+<div class="carousel-wrapper">
+
+  <button class="arrow" onclick="scrollLeft()">❮</button>
+
+  <div class="video-list" id="videoList">
+
+    <div class="video-item" onclick="changeVideo(this)">
+      <iframe src="https://www.youtube.com/embed/a6gjzpsXajg"></iframe>
+      <p>Moussaka</p>
+    </div>
+
+    <div class="video-item" onclick="changeVideo(this)">
+      <iframe src="https://www.youtube.com/embed/7jvq64auiEU"></iframe>
+      <p>Fatta</p>
+    </div>
+
+    <div class="video-item" onclick="changeVideo(this)">
+      <iframe src="https://www.youtube.com/embed/MGmZWMpd6Gk"></iframe>
+      <p>Shish Tawook</p>
+    </div>
+
+    <div class="video-item" onclick="changeVideo(this)">
+      <iframe src="https://www.youtube.com/embed/sv3TXMSv6Lw"></iframe>
+      <p>Pizza</p>
+    </div>
+
+    <div class="video-item" onclick="changeVideo(this)">
+      <iframe src="https://www.youtube.com/embed/87V4nizNJiE"></iframe>
+      <p>Tiramisu</p>
+    </div>
+
+  </div>
+
+  <button class="arrow" onclick="scrollRight()">❯</button>
+
+</div>
+
+<script>
+function scrollLeft(){
+  document.getElementById("videoList").scrollBy({ left: -220, behavior: 'smooth' });
+}
+
+function scrollRight(){
+  document.getElementById("videoList").scrollBy({ left: 220, behavior: 'smooth' });
+}
+
+function changeVideo(el){
+  let iframe = el.querySelector("iframe").src;
+  let title = el.querySelector("p").innerText;
+
+  document.getElementById("mainVideo").src = iframe;
+  document.getElementById("mainTitle").innerText = title;
+}
+</script>
+
+</body>
+</html>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+</body>
+</html>   
