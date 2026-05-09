@@ -1,20 +1,23 @@
 body {
   font-family: Arial;
 
-  /* BACKGROUND IMAGE */
-  background-image: url("/photo/submit\ 1.jpg");
+  background-image: url("/photo/submit 1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
   margin: 0;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TITLE */
 .title {
   text-align: center;
-  color:#db690b;
+  color: #db690b;
   margin-top: 30px;
   font-size: 45px;
 
@@ -24,9 +27,10 @@ body {
 /* FORM BOX */
 .form-container {
   width: 500px;
+  max-width: 90%;
+
   margin: 30px auto;
 
-  /* شفافية بسيطة */
   background: rgba(255,255,255,0.95);
 
   padding: 25px;
@@ -52,15 +56,14 @@ label {
 input,
 textarea,
 select {
+  width: 100%;
   padding: 12px;
+
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 15px;
-}
 
-/* TEXTAREA */
-textarea {
-  resize: none;
+  font-size: 15px;
+  box-sizing: border-box;
 }
 
 /* BUTTON */
@@ -80,7 +83,6 @@ button {
 
 button:hover {
   background-color: #a11f1f;
-  transform: scale(1.03);
 }
 
 /* MESSAGE */
@@ -89,5 +91,56 @@ button:hover {
   text-align: center;
   color: green;
   font-weight: bold;
-  font-size: 18px;
+}
+
+/* FOOTER FIX */
+#footer {
+  margin-top: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 30px;
+  }
+
+  .form-container {
+    width: 95%;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 24px;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 230px) {
+
+  .title {
+    font-size: 16px;
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 10px;
+    padding: 7px;
+  }
 }

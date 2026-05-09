@@ -1,7 +1,6 @@
 body {
   font-family: Arial;
 
-  /* BACKGROUND IMAGE */
   background-image: url("/photo/gerocy.jpg");
   background-size: cover;
   background-position: center;
@@ -17,6 +16,12 @@ body {
   flex-direction: column;
 }
 
+/* NAV + FOOTER FIX */
+#navbar,
+#footer {
+  width: 100%;
+}
+
 /* CONTAINER */
 .container {
   width: 70%;
@@ -27,7 +32,7 @@ body {
 
 /* TITLE */
 .title {
-  color:#db690b;
+  color: #db690b;
   margin-top: 30px;
   font-size: 45px;
 
@@ -105,4 +110,67 @@ button {
 button:hover {
   background: #b33c3c;
   transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 90%;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .item img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .item-content {
+    text-align: center;
+  }
+
+  ul {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 24px;
+  }
+
+  .item {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 230px) {
+
+  .title {
+    font-size: 16px;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  .item img {
+    height: 140px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 8px;
+  }
 }

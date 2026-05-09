@@ -1,8 +1,7 @@
 body {
   font-family: Arial;
 
-  /* BACKGROUND IMAGE */
-  background-image: url("/photo/compare\ back.jpg");
+  background-image: url("/photo/compare back.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,6 +9,10 @@ body {
 
   margin: 0;
   text-align: center;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TITLE */
@@ -23,10 +26,11 @@ body {
 /* INPUT CARD */
 .input-card {
   width: 350px;
+  max-width: 90%;
+
   margin: 20px auto;
   padding: 20px;
 
-  /* شفافية بسيطة */
   background: rgba(255,255,255,0.95);
 
   border-radius: 12px;
@@ -39,8 +43,11 @@ button {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
+
   border-radius: 6px;
   font-size: 16px;
+
+  box-sizing: border-box;
 }
 
 /* BUTTON */
@@ -68,12 +75,13 @@ button:hover {
 /* RESULT CARD */
 .result-card {
   width: 280px;
+  max-width: 90%;
 
-  /* شفافية */
   background: rgba(255,255,255,0.95);
 
   border-radius: 12px;
   padding: 20px;
+
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
 
   transition: 0.3s;
@@ -93,4 +101,64 @@ button:hover {
 .result-card p {
   font-size: 18px;
   margin: 10px 0;
+}
+
+/* FOOTER */
+#footer {
+  margin-top: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 30px;
+  }
+
+  .result-container {
+    margin: 15px;
+    gap: 15px;
+  }
+
+  .result-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 24px;
+  }
+
+  .input-card,
+  .result-card {
+    padding: 15px;
+  }
+
+  select,
+  button,
+  .result-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 230px) {
+
+  .title {
+    font-size: 16px;
+  }
+
+  .input-card,
+  .result-card {
+    padding: 10px;
+  }
+
+  select,
+  button,
+  .result-card p {
+    font-size: 10px;
+    padding: 6px;
+  }
 }
