@@ -27,7 +27,7 @@ function render() {
                     ${item.ingredients.map(i => `<li>${i}</li>`).join("")}
                 </ul>
 
-                <button onclick="removeItem(${index})">❌ Remove</button>
+                <button onclick="removeItem(${index})">Delete</button>
             </div>
 
         </div>
