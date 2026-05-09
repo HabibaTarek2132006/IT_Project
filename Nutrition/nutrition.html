@@ -1,135 +1,133 @@
-
-
-
-
-
-
-
-
-
-
-
-<h1 class="title">🥗 Nutrition Info</h1>
-
-<div class="container">
-
-  <!-- 1 -->
-  <div class="food">
-    <img src="../photo/Egyptian Koshari.jpg">
-    <div class="text">
-      <h2>Koshari</h2>
-      <p>Egyptian street food rich in carbs and fiber.</p>
-      <div class="data">
-        <span>Calories: 450</span>
-        <span>Protein: 15g</span>
-        <span>Carbs: 70g</span>
-        <span>Fat: 10g</span>
-        <span>Sugar: 6g</span>
-        <span>Vitamins: B, Iron</span>
-      </div>
-      <p class="health good">✔ Balanced meal</p>
-    </div>
-  </div>
-
-  <!-- 2 -->
-  <div class="food reverse">
-    <img src="../photo/Moussaka.jpg">
-    <div class="text">
-      <h2>Moussaka</h2>
-      <p>Eggplant and meat dish rich in nutrients.</p>
-      <div class="data">
-        <span>Calories: 400</span>
-        <span>Pr<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
+  
+  <title id="pageTitleNutrition">🥗 Nutrition Info</title>
+
   <link rel="stylesheet" href="../../component/navbar/nav.css">
-<link rel="stylesheet" href="../../component/footer/footer.css">
-
-  <title>Chickens Recipes</title>
-
+  <link rel="stylesheet" href="../../component/footer/footer.css">
   <link rel="stylesheet" href="nutrition.css">
 </head>
 
 <body>
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
 
-<!-- NAVBAR -->
-<div id="navbar"></div>
+  <!-- MAIN TITLE -->
+  <h1 class="title" id="nutritionTitle">🥗 Nutrition Info</h1>
 
-
-otein: 20g</span>
-        <span>Carbs: 25g</span>
-        <span>Fat: 18g</span>
-        <span>Sugar: 5g</span>
-        <span>Vitamins: A, C</span>
+  <div class="container">
+    <!-- 1. Koshari -->
+    <div class="food">
+      <img src="../photo/Egyptian Koshari.jpg" alt="Koshari">
+      <div class="text">
+        <h2 id="koshariTitle">Koshari</h2>
+        <p id="koshariDesc">Egyptian street food rich in carbs and fiber.</p>
+        <div class="data">
+          <span id="koshariCalories">Calories: 450</span>
+          <span id="koshariProtein">Protein: 15g</span>
+          <span id="koshariCarbs">Carbs: 70g</span>
+          <span id="koshariFat">Fat: 10g</span>
+          <span id="koshariSugar">Sugar: 6g</span>
+          <span id="koshariVitamins">Vitamins: B, Iron</span>
+        </div>
+        <p class="health good" id="koshariHealth">✔ Balanced meal</p>
       </div>
-      <p class="health good">✔ Healthy choice</p>
+    </div>
+
+    <!-- 2. Moussaka -->
+    <div class="food reverse">
+      <img src="../photo/Moussaka.jpg" alt="Moussaka">
+      <div class="text">
+        <h2 id="moussakaTitle">Moussaka</h2>
+        <p id="moussakaDesc">Eggplant and meat dish rich in nutrients.</p>
+        <div class="data">
+          <span id="moussakaCalories">Calories: 400</span>
+          <span id="moussakaProtein">Protein: 20g</span>
+          <span id="moussakaCarbs">Carbs: 25g</span>
+          <span id="moussakaFat">Fat: 18g</span>
+          <span id="moussakaSugar">Sugar: 5g</span>
+          <span id="moussakaVitamins">Vitamins: A, C</span>
+        </div>
+        <p class="health good" id="moussakaHealth">✔ Healthy choice</p>
+      </div>
+    </div>
+
+    <!-- 3. Fatta -->
+    <div class="food">
+      <img src="../photo/Fatta.jpg" alt="Fatta">
+      <div class="text">
+        <h2 id="fattaTitle">Fatta</h2>
+        <p id="fattaDesc">Traditional dish with rice and meat.</p>
+        <div class="data">
+          <span id="fattaCalories">Calories: 600</span>
+          <span id="fattaProtein">Protein: 30g</span>
+          <span id="fattaCarbs">Carbs: 65g</span>
+          <span id="fattaFat">Fat: 25g</span>
+          <span id="fattaSugar">Sugar: 4g</span>
+          <span id="fattaVitamins">Vitamins: B12</span>
+        </div>
+        <p class="health bad" id="fattaHealth">⚠ High calories</p>
+      </div>
+    </div>
+
+    <!-- 4. Butter Chicken -->
+    <div class="food reverse">
+      <img src="../../photo/Butter Chicken.jpg" alt="Butter Chicken">
+      <div class="text">
+        <h2 id="butterChickenTitle">Butter Chicken</h2>
+        <p id="butterChickenDesc">Creamy Indian dish rich in fats.</p>
+        <div class="data">
+          <span id="butterChickenCalories">Calories: 550</span>
+          <span id="butterChickenProtein">Protein: 28g</span>
+          <span id="butterChickenCarbs">Carbs: 20g</span>
+          <span id="butterChickenFat">Fat: 30g</span>
+          <span id="butterChickenSugar">Sugar: 6g</span>
+          <span id="butterChickenVitamins">Vitamins: A</span>
+        </div>
+        <p class="health bad" id="butterChickenHealth">⚠ Heavy meal</p>
+      </div>
+    </div>
+
+    <!-- 5. Pizza -->
+    <div class="food">
+      <img src="../photo/Pizza.jpg" alt="Pizza">
+      <div class="text">
+        <h2 id="pizzaTitle">Pizza</h2>
+        <p id="pizzaDesc">Popular dish high in carbs.</p>
+        <div class="data">
+          <span id="pizzaCalories">Calories: 300</span>
+          <span id="pizzaProtein">Protein: 12g</span>
+          <span id="pizzaCarbs">Carbs: 35g</span>
+          <span id="pizzaFat">Fat: 10g</span>
+          <span id="pizzaSugar">Sugar: 4g</span>
+          <span id="pizzaVitamins">Vitamins: Calcium</span>
+        </div>
+        <p class="health bad" id="pizzaHealth">⚠ Eat moderately</p>
+      </div>
     </div>
   </div>
 
-  <!-- 3 -->
-  <div class="food">
-    <img src="../photo/Fatta.jpg">
-    <div class="text">
-      <h2>Fatta</h2>
-      <p>Traditional dish with rice and meat.</p>
-      <div class="data">
-        <span>Calories: 600</span>
-        <span>Protein: 30g</span>
-        <span>Carbs: 65g</span>
-        <span>Fat: 25g</span>
-        <span>Sugar: 4g</span>
-        <span>Vitamins: B12</span>
-      </div>
-      <p class="health bad">⚠ High calories</p>
-    </div>
-  </div>
+  <!-- FOOTER (if needed) -->
+  <div id="footer"></div>
 
-  <!-- 4 -->
-  <div class="food reverse">
-    <img src="../../photo/Butter Chicken.jpg">
-    <div class="text">
-      <h2>Butter Chicken</h2>
-      <p>Creamy Indian dish rich in fats.</p>
-      <div class="data">
-        <span>Calories: 550</span>
-        <span>Protein: 28g</span>
-        <span>Carbs: 20g</span>
-        <span>Fat: 30g</span>
-        <span>Sugar: 6g</span>
-        <span>Vitamins: A</span>
-      </div>
-      <p class="health bad">⚠ Heavy meal</p>
-    </div>
-  </div>
-
-  <!-- 5 -->
-  <div class="food">
-    <img src="../photo/Pizza.jpg">
-    <div class="text">
-      <h2>Pizza</h2>
-      <p>Popular dish high in carbs.</p>
-      <div class="data">
-        <span>Calories: 300</span>
-        <span>Protein: 12g</span>
-        <span>Carbs: 35g</span>
-        <span>Fat: 10g</span>
-        <span>Sugar: 4g</span>
-        <span>Vitamins: Calcium</span>
-      </div>
-      <p class="health bad">⚠ Eat moderately</p>
-    </div>
-  </div>
-
-</div>
-
+  <!-- SCRIPTS -->
+  <script src="/language/language.js"></script>
+  <script src="../../component/navbar/navbar.js"></script>
+  <script>
+    // Reapply language after content loads
+    window.addEventListener('load', function() {
+      reapplyLanguage();
+    });
+  </script>
 </body>
 </html>
-
 
 
 
