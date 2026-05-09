@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Tip | CookHub</title>
+
+  <link rel="stylesheet" href="dailyTip.css">
+</head>
+<body>
+
+<!-- BACK HOME -->
+<a href="/index.html" class="back-home">← Home</a>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>🌟 Daily Cooking Tip</h1>
+    <p>Fresh kitchen hacks every time you visit</p>
+
+  </div>
+
+</section>
+
+<!-- MAIN CARD -->
+<section class="card">
+
+  <h2>Today's Tip</h2>
+
+  <p id="tipText">Loading...</p>
+
+  <div class="buttons">
+
+    <button onclick="newTip()">🔁 New Tip</button>
+
+    <button onclick="saveTip()">❤️ Save</button>
+
+  </div>
+
+</section>
+
+<!-- FAVORITES -->
+<section class="favorites">
+
+  <h2>Saved Tips</h2>
+
+  <ul id="favList"></ul>
+
+</section>
+
+<script src="dailyTip.js"></script>
+
+</body>
+</html>
