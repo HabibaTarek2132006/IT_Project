@@ -8,68 +8,9 @@
   <link rel="stylesheet" href="../../component/navbar/nav.css">
 <link rel="stylesheet" href="../../component/footer/footer.css">
 <title>weekly planner</title>
+<link rel="stylesheet" href="planner.css">
 
 
-<style>
-body {
-  font-family: Arial;
-  background: #ffe8dc;
-  text-align: center;
-  
-}
-
-.container {
-  background: rgb(245, 240, 240);
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 700px;
-  margin: auto;
-  box-shadow: 0 0 15px rgba(218, 196, 154, 0.1);
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-/* الجدول */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-th {
-  background: #ff7043;
-  color: white;
-}
-
-input {
-  width: 90%;
-  padding: 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* زرار */
-button {
-  margin-top: 15px;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 8px;
-  background: #4CAF50;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #45a049;
-}
-</style>
 
 </head>
 
@@ -140,9 +81,9 @@ button:hover {
     </tr>
 
   </table>
-
-  <button onclick="savePlan()">Save Plan</button>
-  <button onclick="loadPlan()">Load Plan</button>
+  
+<button onclick="savePlan()">Save Plan</button>
+<button onclick="clearPlan()">Clear Plan</button>
 </div>
 
 
@@ -152,7 +93,14 @@ button:hover {
 <div id="footer"></div>
 
 <script>
-    function savePlan() {
+ 
+// 🔄 تحميل تلقائي عند فتح الصفحة
+window.onload = function () {
+  loadPlan();
+};
+
+// 💾 Save Plan
+function savePlan() {
   const inputs = document.querySelectorAll("input");
 
   inputs.forEach(input => {
@@ -162,6 +110,7 @@ button:hover {
   alert("Saved successfully ✅");
 }
 
+// 🔄 Load Plan (تلقائي + يدوي لو حبيتي)
 function loadPlan() {
   const inputs = document.querySelectorAll("input");
 
@@ -170,6 +119,17 @@ function loadPlan() {
   });
 }
 
+// 🧹 Clear Plan (جديد)
+function clearPlan() {
+  const inputs = document.querySelectorAll("input");
+
+  inputs.forEach(input => {
+    input.value = "";
+    localStorage.removeItem(input.id);
+  });
+
+  alert("Plan cleared 🧹");
+}
 // تحميل تلقائي أول ما الصفحة تفتح
 window.onload = loadPlan;
 fetch("../../component/navbar/nav.html")
