@@ -6,9 +6,21 @@
 }
 
 body{
-  background: linear-gradient(135deg, #1f1c2c, #e97ade);
+  background: url("https://i.pinimg.com/1200x/0e/8b/45/0e8b451fcd291c1c386f748b44f34b9b.jpg") center/cover no-repeat fixed;
   color:white;
   min-height:100vh;
+}
+
+/* dark overlay */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  z-index:-1;
 }
 
 /* BACK */
@@ -16,17 +28,12 @@ body{
   position:fixed;
   top:15px;
   left:15px;
-
   background:white;
   color:#8470db;
-
   padding:10px 18px;
   border-radius:25px;
-
   text-decoration:none;
   font-weight:bold;
-
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* HEADER */
@@ -41,34 +48,28 @@ body{
 
 .header p{
   margin-top:10px;
-  color:#ddd;
+  color:#eee;
   font-size:18px;
 }
 
-/* TEAM GRID */
+/* TEAM */
 .team{
   width:85%;
   margin:auto;
-
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
-
   padding-bottom:60px;
 }
 
 /* CARD */
 .card{
-  background:rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-
+  background:rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
   text-align:center;
   padding:25px;
-
   border-radius:20px;
-
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);
-
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
   transition:0.3s;
 }
 
@@ -81,6 +82,8 @@ body{
   height:120px;
   border-radius:50%;
   margin-bottom:15px;
+  border:3px solid white;
+  object-fit:cover;
 }
 
 .card h2{
@@ -89,5 +92,5 @@ body{
 
 .card p{
   margin-top:5px;
-  color:#ddd;
+  color:#eee;
 }
