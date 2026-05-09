@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Contact & Live Chat</title>
+  <title id="pageTitle">Contact & Live Chat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="contact.css">
@@ -11,36 +12,38 @@
 <body>
 
 <!-- 🔙 BACK BUTTON -->
-<a href="/index.html" class="back-btn">← Back Home</a>
+<a href="/index.html" class="back-btn" id="backBtn">← Back Home</a>
 
-<h1 class="title">📞 Contact & 💬 Live Chat</h1>
+<h1 class="title" id="titleText">📞 Contact & 💬 Live Chat</h1>
 
 <div class="container">
 
   <!-- CONTACT -->
   <div class="card contact-box">
 
-    <h2>Contact Us</h2>
+    <h2 id="contactTitle">Contact Us</h2>
 
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea placeholder="Your Message"></textarea>
+    <input type="text" placeholder="Your Name" id="nameInput">
+    <input type="email" placeholder="Your Email" id="emailInput">
+    <textarea placeholder="Your Message" id="msgInput"></textarea>
 
-    <button>Send Message</button>
+    <button id="sendBtn">Send Message</button>
 
     <!-- REAL CONTACT OPTIONS -->
     <div class="real-contact">
 
-      <h3>Or contact us directly:</h3>
+      <h3 id="directContactTitle">Or contact us directly:</h3>
 
       <a class="contact-option email"
-         href="mailto:support@cookhub.com?subject=Contact from CookHub">
+         href="mailto:support@cookhub.com?subject=Contact from CookHub"
+         id="emailLink">
          📧 Send Email
       </a>
 
       <a class="contact-option whatsapp"
          href="https://wa.me/201000000000"
-         target="_blank">
+         target="_blank"
+         id="whatsappLink">
          💬 Chat on WhatsApp
       </a>
 
@@ -51,20 +54,26 @@
   <!-- CHAT -->
   <div class="card chat-box">
 
-    <h2>Live Chat</h2>
+    <h2 id="chatTitle">Live Chat</h2>
 
     <div class="chat-messages">
-      <p class="bot">👋 Hello! How can I help you?</p>
+      <p class="bot" id="botMsg">👋 Hello! How can I help you?</p>
     </div>
 
     <div class="chat-input">
-      <input type="text" placeholder="Type message...">
-      <button>Send</button>
+
+      <input type="text" placeholder="Type message..." id="chatInput">
+
+      <button id="chatSendBtn">Send</button>
+
     </div>
 
   </div>
 
 </div>
+
+<!-- 🌍 language system -->
+<script src="/language/language.js"></script>
 
 </body>
 </html>

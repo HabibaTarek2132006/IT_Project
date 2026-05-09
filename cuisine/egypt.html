@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
-  <title>Egyptian Food</title>
+  <title id="pageTitle">Egyptian Food</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -21,30 +22,30 @@
 <!-- NAVBAR -->
 <div id="navbar"></div>
 
-<h1 class="title">🇪🇬 Egyptian Food</h1>
+<h1 id="titleText">🇪🇬 Egyptian Food</h1>
 
 <div class="container">
 
   <div class="card koshari">
-    <h3>Koshari</h3>
+    <h3 id="koshariText">Koshari</h3>
 
-    <button class="save-btn" onclick="addBookmark('Koshari', 'Egyptian', '🍲')">
+    <button class="save-btn" onclick="addBookmark('Koshari', 'Egyptian', '🍲')" id="saveBtn">
       ❤️ Save
     </button>
   </div>
 
   <div class="card feteer">
-    <h3>Feteer Meshaltet</h3>
+    <h3 id="feteerText">Feteer Meshaltet</h3>
 
-    <button class="save-btn" onclick="addBookmark('Feteer Meshaltet', 'Egyptian', '🥞')">
+    <button class="save-btn" onclick="addBookmark('Feteer Meshaltet', 'Egyptian', '🥞')" id="saveBtn2">
       ❤️ Save
     </button>
   </div>
 
   <div class="card moussaka">
-    <h3>Moussaka</h3>
+    <h3 id="moussakaText">Moussaka</h3>
 
-    <button class="save-btn" onclick="addBookmark('Moussaka', 'Egyptian', '🍆')">
+    <button class="save-btn" onclick="addBookmark('Moussaka', 'Egyptian', '🍆')" id="saveBtn3">
       ❤️ Save
     </button>
   </div>
@@ -71,14 +72,15 @@ fetch("/component/footer/footer.html")
 // Bookmark function
 function addBookmark(name, from, icon) {
   let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
-
   bookmarks.push({ name, from, icon });
-
   localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-
   alert("Saved ❤️");
 }
 </script>
 
+<!-- 🌍 language system -->
+<script src="/language/language.js"></script>
+
 </body>
+
 </html>

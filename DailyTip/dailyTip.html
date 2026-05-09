@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Daily Tip | CookHub</title>
+  <title id="pageTitle">Daily Tip | CookHub</title>
 
   <link rel="stylesheet" href="dailyTip.css">
 </head>
+
 <body>
 
 <!-- BACK HOME -->
-<a href="/index.html" class="back-home">← Home</a>
+<a href="/index.html" class="back-home" id="homeLink">← Home</a>
 
 <!-- HERO -->
 <section class="hero">
@@ -18,8 +20,8 @@
 
   <div class="hero-content">
 
-    <h1>🌟 Daily Cooking Tip</h1>
-    <p>Fresh kitchen hacks every time you visit</p>
+    <h1 id="heroTitle">🌟 Daily Cooking Tip</h1>
+    <p id="heroDesc">Fresh kitchen hacks every time you visit</p>
 
   </div>
 
@@ -28,15 +30,15 @@
 <!-- MAIN CARD -->
 <section class="card">
 
-  <h2>Today's Tip</h2>
+  <h2 id="todayTipTitle">Today's Tip</h2>
 
   <p id="tipText">Loading...</p>
 
   <div class="buttons">
 
-    <button onclick="newTip()">🔁 New Tip</button>
+    <button onclick="newTip()" id="newTipBtn">🔁 New Tip</button>
 
-    <button onclick="saveTip()">❤️ Save</button>
+    <button onclick="saveTip()" id="saveBtn">❤️ Save</button>
 
   </div>
 
@@ -45,13 +47,18 @@
 <!-- FAVORITES -->
 <section class="favorites">
 
-  <h2>Saved Tips</h2>
+  <h2 id="savedTipsTitle">Saved Tips</h2>
 
   <ul id="favList"></ul>
 
 </section>
 
+<!-- JS -->
 <script src="dailyTip.js"></script>
 
+<!-- 🌍 language system -->
+<script src="/language/language.js"></script>
+
 </body>
+
 </html>

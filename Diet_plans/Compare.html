@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
+
   <link rel="stylesheet" href="../../component/navbar/nav.css">
-<link rel="stylesheet" href="../../component/footer/footer.css">
-
-  <title>Chickens Recipes</title>
-
+  <link rel="stylesheet" href="../../component/footer/footer.css">
   <link rel="stylesheet" href="Compare.css">
+
+  <title id="pageTitle">Compare Dishes</title>
 </head>
 
 <body>
@@ -19,21 +20,26 @@
 <!-- NAVBAR -->
 <div id="navbar"></div>
 
-<h1 class="title"> Compare Dishes</h1>
+<h1 id="titleText">Compare Dishes</h1>
 
 <div class="input-card">
+
   <select id="dish1"></select>
   <select id="dish2"></select>
-  <button onclick="compare()">Compare</button>
+
+  <button onclick="compare()" id="compareBtn">Compare</button>
+
 </div>
 
 <div id="result" class="result-container"></div>
 
-<script src="Compare.js"></script>
-
+<!-- FOOTER -->
 <div id="footer"></div>
 
+<script src="Compare.js"></script>
+
 <script>
+// navbar + footer
 fetch("../../component/navbar/nav.html")
   .then(res => res.text())
   .then(data => {
@@ -46,5 +52,9 @@ fetch("../../component/footer/footer.html")
     document.getElementById("footer").innerHTML = data;
   });
 </script>
+
+<!-- 🌍 language system -->
+<script src="/language/language.js"></script>
+
 </body>
 </html>

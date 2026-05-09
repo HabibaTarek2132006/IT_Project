@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -10,7 +12,7 @@
   <link rel="stylesheet" href="../../component/footer/footer.css">
   <link rel="stylesheet" href="ing.css">
 
-  <title>Ingredients Calculator</title>
+  <title id="pageTitle">Ingredients Calculator</title>
 </head>
 
 <body>
@@ -20,7 +22,7 @@
 
 <div class="container">
 
-  <h2>Ingredients Calculator 🍲</h2>
+  <h2 id="titleText">Ingredients Calculator 🍲</h2>
 
   <!-- Recipe Name -->
   <input type="text" id="name" placeholder="Recipe Name">
@@ -34,31 +36,44 @@
   </select>
 
   <!-- Ingredients -->
-  <textarea id="input" placeholder="Write ingredients:
-1 cup rice
-2 eggs
-200 g chicken"></textarea>
+  <textarea id="input" placeholder="Write ingredients"></textarea>
 
   <!-- People -->
   <input type="number" id="people" value="2" min="1">
 
-  <button onclick="loadRecipe()">Calculate</button>
+  <button onclick="loadRecipe()" id="calcBtn">Calculate</button>
 
   <hr>
 
-  <h3 id="title"></h3>
+  <h3 id="recipeTitle"></h3>
   <p id="countryText"></p>
 
   <ul id="output"></ul>
 
 </div>
-<!-- 🔹 FOOTER -->
+
+<!-- FOOTER -->
 <div id="footer"></div>
 
+<script>
+
+// 📦 Navbar + Footer load
+fetch("../../component/navbar/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("../../component/footer/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+
+</script>
+
+<script src="/language/language.js"></script>
 <script src="ing.js"></script>
-
-
-
 
 </body>
 </html>

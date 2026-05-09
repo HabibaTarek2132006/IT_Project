@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
+
   <link rel="stylesheet" href="../../component/navbar/nav.css">
-<link rel="stylesheet" href="../../component/footer/footer.css">
-
-  <title>Chickens Recipes</title>
-
+  <link rel="stylesheet" href="../../component/footer/footer.css">
   <link rel="stylesheet" href="video.css">
+
+  <title>Videos</title>
 </head>
 
 <body>
+
 <!-- NAVBAR -->
-<div id="navbar"></div> 
 <div id="navbar"></div>
 
- <h1 class="page-title">VIDEO</h1>
+<h1 id="pageTitle">VIDEOS</h1>
 
 <!-- ⭐ FEATURED VIDEO -->
 <div class="featured-video">
+
   <iframe id="mainVideo"
     src="https://www.youtube.com/embed/XyHL7aJDUag"
     allowfullscreen></iframe>
+
   <h2 id="mainTitle">Koshari</h2>
+
 </div>
 
 <!-- 🔽 CAROUSEL -->
@@ -67,7 +71,12 @@
 
 </div>
 
+<!-- FOOTER -->
+<div id="footer"></div>
+
 <script>
+
+// 🔄 scroll
 function scrollLeft(){
   document.getElementById("videoList").scrollBy({ left: -220, behavior: 'smooth' });
 }
@@ -76,22 +85,18 @@ function scrollRight(){
   document.getElementById("videoList").scrollBy({ left: 220, behavior: 'smooth' });
 }
 
+// 🎬 change video
 function changeVideo(el){
+
   let iframe = el.querySelector("iframe").src;
   let title = el.querySelector("p").innerText;
 
   document.getElementById("mainVideo").src = iframe;
   document.getElementById("mainTitle").innerText = title;
+
 }
-</script>
 
-</body>
-</html>
-
-<!-- FOOTER -->
-<div id="footer"></div>
-
-<script>
+// 📦 load navbar + footer
 fetch("../../component/navbar/nav.html")
   .then(res => res.text())
   .then(data => {
@@ -103,6 +108,11 @@ fetch("../../component/footer/footer.html")
   .then(data => {
     document.getElementById("footer").innerHTML = data;
   });
+
 </script>
+
+<!-- 🌍 language system -->
+<script src="/language/language.js"></script>
+
 </body>
-</html>   
+</html>

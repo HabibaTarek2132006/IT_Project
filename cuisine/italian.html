@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
-  <title>Italian Food</title>
+  <title id="pageTitle">Italian Food</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -22,48 +23,33 @@
 <!-- NAVBAR -->
 <div id="navbar"></div>
 
-<h1 class="title">🇮🇹 Italian Food</h1>
+<h1 id="titleText">🇮🇹 Italian Food</h1>
 
 <div class="container">
 
   <div class="card pizza">
-    <h3>Pizza</h3>
-
-    <button class="save-btn" onclick="addBookmark('Pizza', 'Italian', '🍕')">
-      ❤️ Save
-    </button>
+    <h3 id="pizzaText">Pizza</h3>
+    <button class="save-btn" onclick="addBookmark('Pizza', 'Italian', '🍕')" id="saveBtn">❤️ Save</button>
   </div>
 
   <div class="card lasagna">
-    <h3>Lasagna</h3>
-
-    <button class="save-btn" onclick="addBookmark('Lasagna', 'Italian', '🍝')">
-      ❤️ Save
-    </button>
+    <h3 id="lasagnaText">Lasagna</h3>
+    <button class="save-btn" onclick="addBookmark('Lasagna', 'Italian', '🍝')" id="saveBtn2">❤️ Save</button>
   </div>
 
   <div class="card pasta">
-    <h3>Pasta Alfredo</h3>
-
-    <button class="save-btn" onclick="addBookmark('Pasta Alfredo', 'Italian', '🍝')">
-      ❤️ Save
-    </button>
+    <h3 id="pastaText">Pasta Alfredo</h3>
+    <button class="save-btn" onclick="addBookmark('Pasta Alfredo', 'Italian', '🍝')" id="saveBtn3">❤️ Save</button>
   </div>
 
   <div class="card tiramisu">
-    <h3>Tiramisu</h3>
-
-    <button class="save-btn" onclick="addBookmark('Tiramisu', 'Italian', '🍰')">
-      ❤️ Save
-    </button>
+    <h3 id="tiramisuText">Tiramisu</h3>
+    <button class="save-btn" onclick="addBookmark('Tiramisu', 'Italian', '🍰')" id="saveBtn4">❤️ Save</button>
   </div>
 
   <div class="card risotto">
-    <h3>Risotto</h3>
-
-    <button class="save-btn" onclick="addBookmark('Risotto', 'Italian', '🍚')">
-      ❤️ Save
-    </button>
+    <h3 id="risottoText">Risotto</h3>
+    <button class="save-btn" onclick="addBookmark('Risotto', 'Italian', '🍚')" id="saveBtn5">❤️ Save</button>
   </div>
 
 </div>
@@ -85,18 +71,18 @@ fetch("../../component/footer/footer.html")
     document.getElementById("footer").innerHTML = data;
   });
 
-
-// ⭐ Save function (Bookmark)
+// Bookmark
 function addBookmark(name, from, icon) {
   let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
-
   bookmarks.push({ name, from, icon });
-
   localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-
   alert("Saved ❤️");
 }
 </script>
 
+<!-- 🌍 language system -->
+<script src="/language/language.js"></script>
+
 </body>
+
 </html>

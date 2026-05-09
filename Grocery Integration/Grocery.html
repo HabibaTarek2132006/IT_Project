@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Grocery Page</title>
+  <title id="pageTitle">Grocery Page</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="../../component/navbar/nav.css">
@@ -17,7 +18,7 @@
 <!-- 🔹 NAVBAR -->
 <div id="navbar"></div>
 
-<h1> Grocery Recipes</h1>
+<h1 id="titleText">Grocery Recipes</h1>
 
 <!-- CONTENT -->
 <div id="itemsContainer" class="container"></div>
@@ -42,6 +43,9 @@ fetch("../../component/footer/footer.html")
     document.getElementById("footer").innerHTML = data;
   });
 </script>
+
+<!-- 🌍 language system -->
+<script src="/language/language.js"></script>
 
 </body>
 </html>
